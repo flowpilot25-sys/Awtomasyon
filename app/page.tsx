@@ -94,22 +94,21 @@ const Index = () => {
                 Save Time
               <br />
               <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                Eliminate Repetitive Tasks
+                Eliminate Repetition
               </span>
               <br/>
                <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                Focus On Growth
-              </span>
+Scale Your Business              </span>
             </h1>
           </ScrollAnimation>
 
           <ScrollAnimation animation="fade-in-up" delay={400}>
             <p className="text-xl md:text-2xl lg:text-3xl text-muted-foreground mb-12 max-w-4xl mx-auto leading-relaxed">
-             Awtomasyon helps businesses automate workflows using AI, low-code tools, and custom Node.js integrations
+             At Awtomasyon, we build intelligent automation & integration systems that work 24/7
 
               <span className="text-primary font-semibold">
                 {" "}
-               so your operations run 24/7 without you lifting a finger.
+               — connecting your tools, freeing your team, and letting you focus on growth
               </span>
             </p>
           </ScrollAnimation>
@@ -149,8 +148,7 @@ const Index = () => {
                 What We Do
               </h2>
               <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto">
-               We build smart automation systems that connect your tools, streamline your business processes, and make your team 10x more efficient.
-                {/* <span className="text-primary font-semibold">
+We design, build and maintain automation systems that integrate your business tools, streamline workflows, and boost your team’s productivity by up to 10×                {/* <span className="text-primary font-semibold">
                   {" "}
                   Zapier, Make (Integromat), n8n, AI agents, and fully hosted backend
                   flows
@@ -169,31 +167,25 @@ const Index = () => {
               {
                 icon: Clock,
                 title: "Workflow Automation",
-                desc: "Zapier, Make (Integromat), and n8n",
+                desc: "Custom workflows built to connect your apps, systems and processes.",
                 delay: 0,
               },
               {
                 icon: Target,
                 title: "AI-Powered Workflows",
-                desc: "GPT-based automation, AI chat agents, intelligent data extraction, and reporting",
+                desc: " Intelligent automations for data extraction, summarization, decision-making and reporting.",
                 delay: 100,
               },
               {
                 icon: Cog,
-                title: "Custom Server Integrations",
-                desc: "Node.js and API development for scalable backend automation",
+                title: "Custom Integrations & Backend Automation",
+                desc: "API, database and server-side automation built to scale.",
                 delay: 200,
               },
               {
                 icon: CheckCircle,
-                title: "AI Workflow Agents",
-                desc: "Deploy custom AI agents that can act, decide, and perform multi-step tasks for your team",
-                delay: 300,
-              },
-              {
-                icon: CheckCircle,
                 title: "Business Operations Automation",
-                desc: "CRM syncing, data entry, lead routing, and customer engagement",
+                desc: " From CRM syncing to lead routing to customer engagement, we automate the backbone of your operations.",
                 delay: 300,
               },
             ].map((service, index) => (
@@ -202,7 +194,7 @@ const Index = () => {
                 animation="fade-in-up"
                 delay={service.delay}
               >
-                <Card className="bg-card-gradient border-0 shadow-card hover:shadow-elegant transition-smooth group hover:scale-105 w-80 h-64">
+                <Card className="bg-card-gradient border-0 shadow-card hover:shadow-elegant transition-smooth group hover:scale-105 w-96 h-72">
                   <CardHeader className="text-center">
                     <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-smooth">
                       <service.icon className="w-8 h-8 text-primary group-hover:scale-110 transition-transform" />
@@ -228,14 +220,12 @@ const Index = () => {
             <div className="text-center mb-20">
               <div className="inline-flex items-center gap-2 px-4 py-2 glass rounded-full border border-primary/20 mb-6">
                 <Users className="w-4 h-4 text-primary animate-pulse" />
-                <span className="text-sm font-medium">Our Team</span>
+                <span className="text-sm font-medium">Our Team – Experts in Automation & Integration</span>
               </div>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-                Trained, Tested, and Continuously Evolving
-              </h2>
+Our engineers are not just coders — they are Automation Specialists and AI Integration Engineers who design systems              </h2>
               <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto">
-                At Awtomasyon, we don't just build automations — we train the people who build them.
-              </p>
+ connect platforms and build intelligent workflows that stand the test of time              </p>
             </div>
           </ScrollAnimation>
 
@@ -243,20 +233,20 @@ const Index = () => {
             {[
               {
                 icon: Users,
-                title: "Skilled Developers",
-                desc: "Our automation developers are trained in Zapier, Make, n8n, Node.js, and AI system integration.",
+                title: "Automation Specialists",
+                desc:  "built workflows, APIs, pipelines.",
                 delay: 0,
               },
               {
                 icon: TrendingUp,
-                title: "Continuous Training",
-                desc: "We run ongoing technical workshops and certification programs to keep every dev up to date with the latest AI and automation tools.",
+                title: "AI Integration Engineers",
+                desc: "designing AI-powered automations, decision engines and smart agents.",
                 delay: 100,
               },
               {
                 icon: Brain,
-                title: "AI Agent Specialists",
-                desc: "We're early adopters of AI workflow agents — systems that can handle dynamic decision-making and execute complex processes autonomously.",
+                title: "Continuous learning",
+                desc: "we stay ahead of tech so your systems do too.",
                 delay: 200,
               },
             ].map((item, index) => (
@@ -315,31 +305,31 @@ const Index = () => {
               {
                 icon: Rocket,
                 title: "Efficiency First",
-                desc: "Automate tasks that take hours — in seconds.",
+                desc: "We reduce hours of manual work into minutes through intelligent automation.",
                 delay: 0,
               },
               {
                 icon: Brain,
-                title: "AI-Driven Automations",
-                desc: "We don't just connect apps — we make your systems think.",
+                title: "Intelligent Automation",
+                desc: "We don’t just link your apps — we give your operations the power to think, act and evolve.",
                 delay: 100,
               },
               {
                 icon: Shield,
-                title: "Reliable & Scalable",
-                desc: "Custom automations built for long-term growth.",
+                title: "Scalable & Reliable Systems",
+                desc: "Built for growth, designed to last.",
                 delay: 200,
               },
               {
                 icon: Users,
-                title: "Dedicated Teams",
-                desc: "You get a focused dev team and project manager who know your business inside out.",
+                title: "Dedicated Experts",
+                desc: "You’ll get a focused team that knows your business and your goals.",
                 delay: 300,
               },
               {
                 icon: TrendingUp,
-                title: "Continuous Improvement",
-                desc: "Our devs never stop learning — ensuring you always get cutting-edge solutions.",
+                title: "Continuous Innovation",
+                desc: "Our engineers evolve your automations so you stay ahead.",
                 delay: 400,
               },
             ].map((benefit, index) => (
@@ -385,20 +375,36 @@ const Index = () => {
           {/* Pricing Cards */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-8">
             <PricingCard
-              title="Starter"
-              phpPrice={70000}
-              description="1 Developer — Ideal for small businesses or initial automation setup"
+              title="Starter Automation Package"
+              usdPrice={699}
+              description="Perfect for small businesses beginning their automation journey"
               features={[
-                "1 dedicated automation developer",
-                "Custom workflow development",
-                "Zapier, Make, or n8n expertise",
-                "Direct communication",
+                "1 Dedicated Automation Developer",
+                "15-20 hours of automation development",
+                "Basic workflow setup & integrations",
+                "Light AI enhancements",
+                "Bug fixes + minor updates",
+                "Weekly progress updates",
               ]}
               featureDetails={[
-                "1 dedicated automation developer — fully focused on your projects",
-                "Custom workflow development — tailored to your business needs",
-                "Zapier, Make, or n8n expertise — using the best tools for your use case",
-                "Direct communication — quick feedback and iterations",
+                "1 Dedicated Automation Developer — fully focused on your automation needs",
+                "Up to 15–20 hours of automation development per month",
+                "Basic workflow setup (operations, CRM, leads, notifications, reporting)",
+                "Light AI enhancements (summarization, routing, extraction)",
+                "Integration between essential tools",
+                "Bug fixes + minor updates to keep systems running smoothly",
+                "Weekly progress updates to keep you informed",
+              ]}
+              bestFor={[
+                "Small teams",
+                "Early-stage startups",
+                "Businesses trying automation for the first time",
+              ]}
+              whyItConverts={[
+                "Low risk",
+                "Low cost",
+                "Clear and simple",
+                "Easy entry point",
               ]}
               badge="MOST POPULAR"
               badgeColor="from-cyan-500 to-lime-500"
@@ -410,20 +416,38 @@ const Index = () => {
             />
 
             <PricingCard
-              title="Growth"
-              phpPrice={85000}
-              description="1 Project Manager + 1 Developer — For ongoing automation and maintenance"
+              title="Growth Automation Package"
+              usdPrice={1499}
+              description="Designed for businesses that need consistent automation & integrations"
               features={[
-                "1 project manager + 1 developer",
-                "Ongoing automation maintenance",
-                "Priority support",
-                "Regular progress updates",
+                "1 Automation Developer + 1 Project Manager",
+                "40 hours of automation work",
+                "Advanced workflow design",
+                "AI-powered automations",
+                "Custom API integrations",
+                "Priority support (2hr response)",
+                "Monthly automation report",
               ]}
               featureDetails={[
-                "1 project manager + 1 developer — coordinated team effort",
-                "Ongoing automation maintenance — continuous optimization and updates",
-                "Priority support — faster response times",
-                "Regular progress updates — stay informed on all developments",
+                "1 Automation Developer + 1 Project Manager (part-time for oversight + planning)",
+                "Up to 40 hours of automation & integration work per month",
+                "Advanced workflow design (multi-step, cross-department, data pipelines)",
+                "AI-powered automations (document processing, smart routing, AI agents)",
+                "Custom API integrations tailored to your business needs",
+                "System optimization & performance monitoring",
+                "Priority support with responses within 2 hours",
+                "Monthly automation report tracking progress and metrics",
+              ]}
+              bestFor={[
+                "Companies growing fast",
+                "Agencies with recurring tasks",
+                "Businesses with multiple tools or systems",
+              ]}
+              whyItConverts={[
+                "Adds PM oversight = higher perceived quality",
+                "Solves more complex tasks",
+                "Businesses feel 'taken care of'",
+                "Ideal mid-tier 'sweet spot' for revenue",
               ]}
               icon={<Sprout className="w-8 h-8 text-white" />}
               gradient="from-teal-500 to-cyan-500"
@@ -432,20 +456,44 @@ const Index = () => {
             />
 
             <PricingCard
-              title="Scale"
-              phpPrice={120000}
-              description="1 Project Manager + 2 Developers — For teams that need constant automation and scaling"
+              title="Automation Ops Team (AOT)"
+              usdPrice={3499}
+              description="Full-service automation & AI operations team for scaling companies"
               features={[
-                "1 project manager + 2 developers",
-                "Constant automation & scaling",
-                "Advanced AI integrations",
-                "Dedicated team support",
+                "Full team: Senior Engineer + Dev + PM + AI Specialist",
+                "90 hours of development per month",
+                "Enterprise-grade automation architecture",
+                "AI automation systems & agents",
+                "Custom backend automation",
+                "Dedicated Slack channel",
+                "On-call support (business hours)",
+                "Documentation + SOPs",
+                "Quarterly strategy planning",
               ]}
               featureDetails={[
-                "1 project manager + 2 developers — full team capacity",
-                "Constant automation & scaling — handle growing complexity",
-                "Advanced AI integrations — cutting-edge automation solutions",
-                "Dedicated team support — always available for your needs",
+                "1 Senior Automation Engineer + 1 Automation Developer + 1 Project Manager + 1 AI Specialist (shared)",
+                "Up to 90 hours of development per month",
+                "Enterprise-grade automation architecture built to scale",
+                "AI automation systems (agents, decision layers, custom logic)",
+                "Custom backend automation (APIs, databases, pipelines)",
+                "Unlimited workflow optimization for peak performance",
+                "Dedicated Slack channel for instant communication",
+                "On-call support during business hours",
+                "Documentation + SOPs for all implementations",
+                "Security-first implementation approach",
+                "Quarterly automation strategy planning sessions",
+              ]}
+              bestFor={[
+                "Large teams that rely on automation",
+                "Operations-heavy businesses",
+                "Companies replacing internal dev hires",
+                "Startups scaling beyond basic tools",
+              ]}
+              whyItConverts={[
+                "Reads like a 'done-for-you tech department'",
+                "Makes clients feel they're buying a team, not hours",
+                "Perfect for long-term contracts",
+                "Lets you charge premium without resistance",
               ]}
               badge="ENTERPRISE"
               badgeColor="from-cyan-600 to-lime-600"

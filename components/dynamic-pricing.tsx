@@ -1,7 +1,9 @@
 "use client";
 
+import { useState } from "react";
 import { useCurrency } from "@/components/currency-context";
 import { convertPrice, formatPrice } from "@/components/currency-changer";
+import { ChevronDown, ChevronUp } from "lucide-react";
 
 interface PricingCardProps {
   title: string;
@@ -10,6 +12,8 @@ interface PricingCardProps {
   description: string;
   features: string[];
   featureDetails?: string[]; // New prop for detailed descriptions
+  bestFor?: string[]; // Who this package is best for
+  whyItConverts?: string[]; // Why customers choose this package
   badge?: string;
   badgeColor?: string;
   icon: React.ReactNode;
@@ -27,6 +31,8 @@ export function PricingCard({
   description,
   features,
   featureDetails = [], // Default to empty array
+  bestFor = [], // Default to empty array
+  whyItConverts = [], // Default to empty array
   badge,
   badgeColor = "from-cyan-500 to-lime-500",
   icon,
@@ -37,6 +43,8 @@ export function PricingCard({
   enterprise = false,
 }: PricingCardProps) {
   const { selectedCurrency, currencies } = useCurrency();
+  const [isBestForExpanded, setIsBestForExpanded] = useState(false);
+  const [isWhyItConvertsExpanded, setIsWhyItConvertsExpanded] = useState(false);
 
   // Get PHP currency object for conversion
   const phpCurrency = currencies.find(c => c.code === 'PHP');
@@ -147,6 +155,76 @@ export function PricingCard({
             </div>
           )}
         </div>
+
+        {/* Best For Section - Collapsible */}
+        {bestFor.length > 0 && (
+          <div className="mb-4">
+            <button
+              onClick={() => setIsBestForExpanded(!isBestForExpanded)}
+              className="w-full flex items-center justify-between p-3 bg-gradient-to-r from-slate-50 to-slate-100 dark:from-slate-800 dark:to-slate-700 rounded-lg border border-slate-200 dark:border-slate-600 hover:border-slate-300 dark:hover:border-slate-500 transition-all duration-200 group"
+            >
+              <h4 className="text-sm font-bold text-slate-900 dark:text-white uppercase tracking-wide">
+                Best For
+              </h4>
+              {isBestForExpanded ? (
+                <ChevronUp className="w-4 h-4 text-slate-600 dark:text-slate-400 group-hover:text-slate-900 dark:group-hover:text-white transition-colors" />
+              ) : (
+                <ChevronDown className="w-4 h-4 text-slate-600 dark:text-slate-400 group-hover:text-slate-900 dark:group-hover:text-white transition-colors" />
+              )}
+            </button>
+            <div
+              className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                isBestForExpanded ? 'max-h-96 opacity-100 mt-2' : 'max-h-0 opacity-0'
+              }`}
+            >
+              <div className="p-4 bg-gradient-to-r from-slate-50 to-slate-100 dark:from-slate-800 dark:to-slate-700 rounded-lg border border-slate-200 dark:border-slate-600">
+                <ul className="space-y-2">
+                  {bestFor.map((item, i) => (
+                    <li key={i} className="flex items-start gap-2 text-sm text-slate-700 dark:text-slate-300">
+                      <span className="text-cyan-600 dark:text-cyan-400 mt-0.5">•</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* Why It Converts Section - Collapsible */}
+        {whyItConverts.length > 0 && (
+          <div className="mb-6">
+            <button
+              onClick={() => setIsWhyItConvertsExpanded(!isWhyItConvertsExpanded)}
+              className="w-full flex items-center justify-between p-3 bg-gradient-to-r from-cyan-50 to-lime-50 dark:from-cyan-900/30 dark:to-lime-900/30 rounded-lg border border-cyan-200 dark:border-cyan-700 hover:border-cyan-300 dark:hover:border-cyan-600 transition-all duration-200 group"
+            >
+              <h4 className="text-sm font-bold text-cyan-900 dark:text-cyan-100 uppercase tracking-wide">
+                Why Choose This
+              </h4>
+              {isWhyItConvertsExpanded ? (
+                <ChevronUp className="w-4 h-4 text-cyan-600 dark:text-cyan-400 group-hover:text-cyan-900 dark:group-hover:text-cyan-100 transition-colors" />
+              ) : (
+                <ChevronDown className="w-4 h-4 text-cyan-600 dark:text-cyan-400 group-hover:text-cyan-900 dark:group-hover:text-cyan-100 transition-colors" />
+              )}
+            </button>
+            <div
+              className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                isWhyItConvertsExpanded ? 'max-h-96 opacity-100 mt-2' : 'max-h-0 opacity-0'
+              }`}
+            >
+              <div className="p-4 bg-gradient-to-r from-cyan-50 to-lime-50 dark:from-cyan-900/30 dark:to-lime-900/30 rounded-lg border border-cyan-200 dark:border-cyan-700">
+                <ul className="space-y-2">
+                  {whyItConverts.map((item, i) => (
+                    <li key={i} className="flex items-start gap-2 text-sm text-cyan-800 dark:text-cyan-200">
+                      <span className="text-lime-600 dark:text-lime-400 mt-0.5">✓</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        )}
 
         <div className="flex justify-center mt-auto">
           <a
