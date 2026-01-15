@@ -962,7 +962,7 @@ Our engineers are not just coders — they are Automation Specialists and AI Int
                            Joshua Wong
                         </h4>
                         <p className="text-primary text-center font-medium mb-3">
-                          Co Founder and CEO
+                          Co-Founder and CEO
                         </p>
                         <p className="text-sm text-muted-foreground text-center leading-relaxed group-hover:text-foreground transition-colors">
                           Drives technology decisions and platform development
