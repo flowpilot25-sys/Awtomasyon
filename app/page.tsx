@@ -947,10 +947,10 @@ Our engineers are not just coders — they are Automation Specialists and AI Int
                     </div>
                   </div>
 
-                  {/* Sales & Marketing */}
+                  {/* Co founder */}
                   <div className="mb-16">
                     <h4 className="text-xl md:text-2xl font-semibold mb-8 text-center text-primary">
-                      Sales & Marketing
+                      Co-Founder & CEO
                     </h4>
                     <div className=" max-w-3xl mx-auto">
                       {/* Sales Lead */}
@@ -962,7 +962,7 @@ Our engineers are not just coders — they are Automation Specialists and AI Int
                            Joshua Wong
                         </h4>
                         <p className="text-primary text-center font-medium mb-3">
-                          Co Founder and Marketing
+                          Co Founder and CEO
                         </p>
                         <p className="text-sm text-muted-foreground text-center leading-relaxed group-hover:text-foreground transition-colors">
                           Drives technology decisions and platform development
