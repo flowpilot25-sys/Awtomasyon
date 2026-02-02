@@ -16,7 +16,6 @@ const navigationItems = [
   { name: "Pricing", href: "#pricing" },
   { name: "Results", href: "#results" },
   { name: "Blog", href: "#blog" },
-  { name: "Community", href: "#community" },
   { name: "About", href: "#about" },
   { name: "Contact", href: "#contact" },
 ];

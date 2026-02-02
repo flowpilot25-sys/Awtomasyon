@@ -115,9 +115,8 @@ Scale Your Business              </span>
 
           <ScrollAnimation animation="scale-in" delay={600}>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" >
-              <Link href="https://form.jotform.com/252194204772456" target="_blank" rel="noopener noreferrer">
+              <Link href="/strategycall">
               <Button
-              
                 variant="hero"
                 size="lg"
                 className="text-lg px-10 py-6 animate-pulse-glow text-white"
@@ -411,7 +410,7 @@ Our engineers are not just coders — they are Automation Specialists and AI Int
               icon={<Zap className="w-8 h-8 text-white" />}
               gradient="from-cyan-500 to-lime-500"
               buttonText="Get Free Trial 7 Days"
-              buttonHref="https://form.jotform.com/252194204772456"
+              buttonHref="/strategycall"
               popular={true}
             />
 
@@ -452,7 +451,7 @@ Our engineers are not just coders — they are Automation Specialists and AI Int
               icon={<Sprout className="w-8 h-8 text-white" />}
               gradient="from-teal-500 to-cyan-500"
               buttonText="Get Free Trial 7 Days"
-              buttonHref="https://form.jotform.com/252194204772456"
+              buttonHref="/strategycall"
             />
 
             <PricingCard
@@ -500,7 +499,7 @@ Our engineers are not just coders — they are Automation Specialists and AI Int
               icon={<Shield className="w-8 h-8 text-white" />}
               gradient="from-cyan-600 via-teal-600 to-lime-600"
               buttonText="Get Free Trial 7 Days"
-              buttonHref="https://form.jotform.com/252194204772456"
+              buttonHref="/strategycall"
               enterprise={true}
             />
           </div>
@@ -702,84 +701,6 @@ Our engineers are not just coders — they are Automation Specialists and AI Int
 
       {/* Blog Section */}
       <BlogSection />
-
-      {/* Skool Community Section */}
-      <section id="community" className="px-6 py-20 lg:py-32 bg-gradient-to-br from-primary/5 via-accent/5 to-primary/5">
-        <div className="max-w-5xl mx-auto">
-          <ScrollAnimation animation="fade-in-up">
-            <div className="text-center mb-12">
-              <div className="inline-flex items-center gap-2 px-4 py-2 glass rounded-full border border-primary/20 mb-6">
-                <Rocket className="w-4 h-4 text-primary animate-pulse" />
-                <span className="text-sm font-medium">Community</span>
-              </div>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-                Ready to Start, Grow, and Automate Your Business?
-              </h2>
-              <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-4xl mx-auto leading-relaxed">
-                Join our Skool community where entrepreneurs, creators, and business owners come together to share proven strategies, tools, and real-world lessons that actually work.
-              </p>
-            </div>
-          </ScrollAnimation>
-
-          <ScrollAnimation animation="fade-in-up" delay={200}>
-            <div className="glass rounded-3xl p-8 md:p-12 shadow-elegant hover:shadow-glow transition-all duration-500">
-              <div className="text-center mb-8">
-                <h3 className="text-2xl md:text-3xl font-semibold mb-4 text-primary">
-                  Get access to:
-                </h3>
-              </div>
-              
-              <div className="grid md:grid-cols-3 gap-6 mb-10">
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-smooth">
-                    <Target className="w-8 h-8 text-primary" />
-                  </div>
-                  <h4 className="text-lg font-semibold mb-2">Actionable Business Growth Frameworks</h4>
-                  <p className="text-muted-foreground">Proven strategies to scale your business efficiently</p>
-                </div>
-                
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-smooth">
-                    <Users className="w-8 h-8 text-primary" />
-                  </div>
-                  <h4 className="text-lg font-semibold mb-2">Exclusive Community Discussions</h4>
-                  <p className="text-muted-foreground">Connect with like-minded entrepreneurs and creators</p>
-                </div>
-                
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-smooth">
-                    <TrendingUp className="w-8 h-8 text-primary" />
-                  </div>
-                  <h4 className="text-lg font-semibold mb-2">Step-by-Step Guidance</h4>
-                  <p className="text-muted-foreground">Start, grow, and sell smarter with expert guidance</p>
-                </div>
-              </div>
-
-              <div className="text-center">
-                <p className="text-lg text-muted-foreground mb-8">
-                  Let's build something amazing together.
-                </p>
-                
-                <Link
-                  href="https://www.skool.com/startgrowsell-3532/about?ref=8b298a49c2544545832ae27af9b05365"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Button
-                    variant="hero"
-                    size="lg"
-                    className="text-lg px-6 py-6 animate-pulse-glow text-white sm:text-base md:text-lg"
-                  >
-                    <span className="hidden sm:inline">Click here to join us now: Join the Skool Community</span>
-                    <span className="sm:hidden">Join Skool Community</span>
-                    <ArrowRight className="w-5 h-5 ml-2" />
-                  </Button>
-                </Link>
-              </div>
-            </div>
-          </ScrollAnimation>
-        </div>
-      </section>
 
       {/* About Section */}
       <ScrollAnimation>
@@ -1101,7 +1022,7 @@ Our engineers are not just coders — they are Automation Specialists and AI Int
 
           <ScrollAnimation animation="scale-in" delay={200}>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Link href="https://form.jotform.com/252194204772456" target="_blank" rel="noopener noreferrer">
+              <Link href="/strategycall">
                 <Button
                   variant="hero"
                   size="lg"
