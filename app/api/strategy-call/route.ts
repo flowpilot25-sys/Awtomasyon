@@ -69,10 +69,14 @@ export async function POST(request: Request) {
       }
     );
 
+    const responseText = await response.text();
+    console.log("n8n response status:", response.status);
+    console.log("n8n response body:", responseText);
+
     if (response.ok) {
       return NextResponse.json({ success: true }, { status: 200 });
     } else {
-      console.error("n8n error:", response.status, await response.text());
+      console.error("n8n error:", response.status, responseText);
       return NextResponse.json(
         { success: false, error: "Failed to submit" },
         { status: 500 }

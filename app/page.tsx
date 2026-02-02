@@ -409,7 +409,7 @@ Our engineers are not just coders — they are Automation Specialists and AI Int
               badgeColor="from-cyan-500 to-lime-500"
               icon={<Zap className="w-8 h-8 text-white" />}
               gradient="from-cyan-500 to-lime-500"
-              buttonText="Get Free Trial 7 Days"
+              buttonText="Book a Strategy Call"
               buttonHref="/strategycall"
               popular={true}
             />
@@ -450,7 +450,7 @@ Our engineers are not just coders — they are Automation Specialists and AI Int
               ]}
               icon={<Sprout className="w-8 h-8 text-white" />}
               gradient="from-teal-500 to-cyan-500"
-              buttonText="Get Free Trial 7 Days"
+              buttonText="Book a Strategy Call"
               buttonHref="/strategycall"
             />
 
@@ -498,7 +498,7 @@ Our engineers are not just coders — they are Automation Specialists and AI Int
               badgeColor="from-cyan-600 to-lime-600"
               icon={<Shield className="w-8 h-8 text-white" />}
               gradient="from-cyan-600 via-teal-600 to-lime-600"
-              buttonText="Get Free Trial 7 Days"
+              buttonText="Book a Strategy Call"
               buttonHref="/strategycall"
               enterprise={true}
             />
