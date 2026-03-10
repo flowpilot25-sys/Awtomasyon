@@ -894,31 +894,6 @@ Our engineers are not just coders — they are Automation Specialists and AI Int
                     </div>
                   </div>
 
-                  {/* Operations */}
-                  <div className="mb-16">
-                    <h4 className="text-xl md:text-2xl font-semibold mb-8 text-center text-primary">
-                      Operations
-                    </h4>
-                    <div className=" max-w-3xl mx-auto">
-                      {/* Operations Director */}
-                      <div className="glass rounded-2xl p-6 hover:shadow-glow transition-all duration-500 hover:-translate-y-2 group">
-                        <div className="w-16 h-16 bg-gradient-to-br from-primary to-accent rounded-2xl flex items-center justify-center text-2xl text-white mb-4 mx-auto">
-                          N
-                        </div>
-                        <h4 className="text-xl font-semibold text-center mb-2">
-                          Noly Mananquil
-                        </h4>
-                        <p className="text-primary text-center font-medium mb-3">
-                          Operations Director
-                        </p>
-                        <p className="text-sm text-muted-foreground text-center leading-relaxed group-hover:text-foreground transition-colors">
-                          Oversees operational excellence and process optimization
-                        </p>
-                      </div>
-
-                    
-                    </div>
-                  </div>
                 </div>
               </ScrollAnimation>
 
@@ -934,7 +909,7 @@ Our engineers are not just coders — they are Automation Specialists and AI Int
                   <p className="text-lg text-center mb-12 text-muted-foreground leading-relaxed max-w-3xl mx-auto">
                     7 Specialists Experts in Zapier, Make, n8n, and custom integrations
                   </p>
-                  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                  <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
                     {/* Tim */}
                     <div className="glass rounded-2xl p-6 hover:shadow-glow transition-all duration-500 hover:-translate-y-2 group">
                       <div className="w-16 h-16 bg-hero-gradient rounded-2xl flex items-center justify-center text-2xl text-white mb-4 mx-auto">
@@ -951,50 +926,19 @@ Our engineers are not just coders — they are Automation Specialists and AI Int
                       </p>
                     </div>
 
-                    {/* Leslie */}
+                    {/* Moris */}
                     <div className="glass rounded-2xl p-6 hover:shadow-glow transition-all duration-500 hover:-translate-y-2 group">
-                      <div className="w-16 h-16 bg-hero-gradient rounded-2xl flex items-center justify-center text-2xl text-white mb-4 mx-auto">
-                        <User className="w-8 h-8 text-white" />
-                      </div>
-                      <h4 className="text-xl font-semibold text-center mb-2">
-                        Leslie Gorospe
-                      </h4>
-                      <p className="text-primary text-center font-medium mb-3">
-                        Senior dev
-                      </p>
-                      <p className="text-sm text-muted-foreground text-center leading-relaxed group-hover:text-foreground transition-colors">
-                        Full-stack development and custom automation solutions expert
-                      </p>
-                    </div>                  
-
-                    {/* Ram */}
-                    <div className="glass rounded-2xl p-6 hover:shadow-glow transition-all duration-500 hover:-translate-y-2 group md:col-span-2 lg:col-span-1">
                       <div className="w-16 h-16 bg-gradient-to-br from-primary to-accent rounded-2xl flex items-center justify-center text-2xl text-white mb-4 mx-auto">
                         <User className="w-8 h-8 text-white" />
                       </div>
                       <h4 className="text-xl font-semibold text-center mb-2">
-                        Ram
+                        Moris
                       </h4>
                       <p className="text-primary text-center font-medium mb-3">
-                        Multi-platform Automation
+                        AIA Automation
                       </p>
                       <p className="text-sm text-muted-foreground text-center leading-relaxed group-hover:text-foreground transition-colors">
-                        Connects and automates across diverse platforms and tools
-                      </p>
-                    </div>
-                    {/* Randell  */}
-                    <div className="glass rounded-2xl p-6 hover:shadow-glow transition-all duration-500 hover:-translate-y-2 group md:col-span-2 lg:col-span-1">
-                      <div className="w-16 h-16 bg-gradient-to-br from-primary to-accent rounded-2xl flex items-center justify-center text-2xl text-white mb-4 mx-auto">
-                        <User className="w-8 h-8 text-white" />
-                      </div>
-                      <h4 className="text-xl font-semibold text-center mb-2">
-                        Randell
-                      </h4>
-                      <p className="text-primary text-center font-medium mb-3">
-                        QA + Performance Optimization
-                      </p>
-                      <p className="text-sm text-muted-foreground text-center leading-relaxed group-hover:text-foreground transition-colors">
-                        Ensures reliability and peak performance of all automations
+                        Specializes in AI-powered automation and intelligent workflow solutions
                       </p>
                     </div>
                   </div>
