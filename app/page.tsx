@@ -207,77 +207,6 @@ We design, build and maintain automation systems that integrate your business to
         </div>
       </section>
 
-      {/* Our Team Section */}
-      <section className="px-6 py-20 lg:py-32">
-        <div className="max-w-7xl mx-auto">
-          <ScrollAnimation animation="fade-in-up">
-            <div className="text-center mb-20">
-              <div className="inline-flex items-center gap-2 px-4 py-2 glass rounded-full border border-primary/20 mb-6">
-                <Users className="w-4 h-4 text-primary animate-pulse" />
-                <span className="text-sm font-medium">Our Team – Experts in Automation & Integration</span>
-              </div>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-Our engineers are not just coders — they are Automation Specialists and AI Integration Engineers who design systems              </h2>
-              <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto">
- connect platforms and build intelligent workflows that stand the test of time              </p>
-            </div>
-          </ScrollAnimation>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                icon: Users,
-                title: "Automation Specialists",
-                desc:  "built workflows, APIs, pipelines.",
-                delay: 0,
-              },
-              {
-                icon: TrendingUp,
-                title: "AI Integration Engineers",
-                desc: "designing AI-powered automations, decision engines and smart agents.",
-                delay: 100,
-              },
-              {
-                icon: Brain,
-                title: "Continuous learning",
-                desc: "we stay ahead of tech so your systems do too.",
-                delay: 200,
-              },
-            ].map((item, index) => (
-              <ScrollAnimation
-                key={index}
-                animation="fade-in-up"
-                delay={item.delay}
-              >
-                <Card className="bg-card-gradient border-0 shadow-card hover:shadow-elegant transition-smooth group hover:scale-105 h-full">
-                  <CardHeader className="text-center">
-                    <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-smooth">
-                      <item.icon className="w-8 h-8 text-primary group-hover:scale-110 transition-transform" />
-                    </div>
-                    <CardTitle className="text-xl">{item.title}</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-muted-foreground text-center">
-                      {item.desc}
-                    </p>
-                  </CardContent>
-                </Card>
-              </ScrollAnimation>
-            ))}
-          </div>
-
-          <ScrollAnimation animation="fade-in-up" delay={300}>
-            <div className="mt-12 text-center">
-              <div className="glass rounded-2xl p-8 max-w-3xl mx-auto">
-                <p className="text-lg md:text-xl text-muted-foreground">
-                  When you hire Awtomasyon, you're not just getting a developer — you're getting an{" "}
-                  <span className="text-primary font-semibold">AI-first automation partner.</span>
-                </p>
-              </div>
-            </div>
-          </ScrollAnimation>
-        </div>
-      </section>
 
       {/* Why Choose Awtomasyon Section */}
       <section className="px-6 py-20 lg:py-32 bg-secondary/30">
@@ -685,6 +614,174 @@ Our engineers are not just coders — they are Automation Specialists and AI Int
                     <span>
                       Result: 80% less manual work, improved response time and
                       customer satisfaction
+                    </span>
+                  </div>
+                </CardContent>
+              </Card>
+            </ScrollAnimation>
+
+            {/* FCI London */}
+            <ScrollAnimation animation="slide-in-left">
+              <Card className="bg-card shadow-card hover:shadow-elegant transition-smooth group h-full">
+                <CardHeader>
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center group-hover:bg-primary/20 transition-smooth">
+                      <Cog className="w-6 h-6 text-primary" />
+                    </div>
+                    <CardTitle className="text-2xl">FCI London</CardTitle>
+                  </div>
+                  <CardDescription className="text-lg">
+                    <strong>Problem:</strong> Disconnected systems slowing down operations
+                  </CardDescription>
+                </CardHeader>
+                <CardContent className="space-y-6">
+                  <div className="text-lg">
+                    <strong>Solution:</strong> Integrated core business tools and automated key workflows to streamline daily operations
+                  </div>
+                  <div className="flex items-center gap-3 text-primary font-semibold text-lg">
+                    <TrendingUp className="w-6 h-6" />
+                    <span>
+                      Result: Unified systems, faster turnaround across departments
+                    </span>
+                  </div>
+                </CardContent>
+              </Card>
+            </ScrollAnimation>
+
+            {/* Linkage */}
+            <ScrollAnimation animation="slide-in-right">
+              <Card className="bg-card shadow-card hover:shadow-elegant transition-smooth group h-full">
+                <CardHeader>
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center group-hover:bg-primary/20 transition-smooth">
+                      <Target className="w-6 h-6 text-primary" />
+                    </div>
+                    <CardTitle className="text-2xl">Linkage</CardTitle>
+                  </div>
+                  <CardDescription className="text-lg">
+                    <strong>Problem:</strong> Manual processes creating bottlenecks in growth
+                  </CardDescription>
+                </CardHeader>
+                <CardContent className="space-y-6">
+                  <div className="text-lg">
+                    <strong>Solution:</strong> Designed automated pipelines to connect platforms and eliminate repetitive tasks
+                  </div>
+                  <div className="flex items-center gap-3 text-primary font-semibold text-lg">
+                    <TrendingUp className="w-6 h-6" />
+                    <span>
+                      Result: Streamlined operations, significant time savings across teams
+                    </span>
+                  </div>
+                </CardContent>
+              </Card>
+            </ScrollAnimation>
+
+            {/* New Media Service */}
+            <ScrollAnimation animation="slide-in-left">
+              <Card className="bg-card shadow-card hover:shadow-elegant transition-smooth group h-full">
+                <CardHeader>
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center group-hover:bg-primary/20 transition-smooth">
+                      <Sparkles className="w-6 h-6 text-primary" />
+                    </div>
+                    <CardTitle className="text-2xl">New Media Service</CardTitle>
+                  </div>
+                  <CardDescription className="text-lg">
+                    <strong>Problem:</strong> Content and campaign workflows were time-consuming and fragmented
+                  </CardDescription>
+                </CardHeader>
+                <CardContent className="space-y-6">
+                  <div className="text-lg">
+                    <strong>Solution:</strong> Built automated content pipelines and reporting dashboards to keep campaigns running smoothly
+                  </div>
+                  <div className="flex items-center gap-3 text-primary font-semibold text-lg">
+                    <TrendingUp className="w-6 h-6" />
+                    <span>
+                      Result: Faster campaign execution, real-time performance insights
+                    </span>
+                  </div>
+                </CardContent>
+              </Card>
+            </ScrollAnimation>
+
+            {/* StartGrowSell */}
+            <ScrollAnimation animation="slide-in-right">
+              <Card className="bg-card shadow-card hover:shadow-elegant transition-smooth group h-full">
+                <CardHeader>
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center group-hover:bg-primary/20 transition-smooth">
+                      <Rocket className="w-6 h-6 text-primary" />
+                    </div>
+                    <CardTitle className="text-2xl">StartGrowSell</CardTitle>
+                  </div>
+                  <CardDescription className="text-lg">
+                    <strong>Problem:</strong> Sales and lead management required too much manual effort
+                  </CardDescription>
+                </CardHeader>
+                <CardContent className="space-y-6">
+                  <div className="text-lg">
+                    <strong>Solution:</strong> Automated lead capture, CRM updates, and follow-up sequences to accelerate the sales cycle
+                  </div>
+                  <div className="flex items-center gap-3 text-primary font-semibold text-lg">
+                    <TrendingUp className="w-6 h-6" />
+                    <span>
+                      Result: Higher conversion rates, hands-free lead nurturing
+                    </span>
+                  </div>
+                </CardContent>
+              </Card>
+            </ScrollAnimation>
+
+            {/* Premier Fitness */}
+            <ScrollAnimation animation="slide-in-left">
+              <Card className="bg-card shadow-card hover:shadow-elegant transition-smooth group h-full">
+                <CardHeader>
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center group-hover:bg-primary/20 transition-smooth">
+                      <CheckCircle className="w-6 h-6 text-primary" />
+                    </div>
+                    <CardTitle className="text-2xl">Premier Fitness</CardTitle>
+                  </div>
+                  <CardDescription className="text-lg">
+                    <strong>Problem:</strong> Member onboarding and scheduling were handled manually
+                  </CardDescription>
+                </CardHeader>
+                <CardContent className="space-y-6">
+                  <div className="text-lg">
+                    <strong>Solution:</strong> Automated member sign-ups, booking confirmations, and internal notifications
+                  </div>
+                  <div className="flex items-center gap-3 text-primary font-semibold text-lg">
+                    <TrendingUp className="w-6 h-6" />
+                    <span>
+                      Result: Smoother onboarding, reduced admin workload
+                    </span>
+                  </div>
+                </CardContent>
+              </Card>
+            </ScrollAnimation>
+
+            {/* Hillman Company */}
+            <ScrollAnimation animation="slide-in-right">
+              <Card className="bg-card shadow-card hover:shadow-elegant transition-smooth group h-full">
+                <CardHeader>
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center group-hover:bg-primary/20 transition-smooth">
+                      <Shield className="w-6 h-6 text-primary" />
+                    </div>
+                    <CardTitle className="text-2xl">Hillman Company</CardTitle>
+                  </div>
+                  <CardDescription className="text-lg">
+                    <strong>Problem:</strong> Reporting and data workflows were slow and error-prone
+                  </CardDescription>
+                </CardHeader>
+                <CardContent className="space-y-6">
+                  <div className="text-lg">
+                    <strong>Solution:</strong> Implemented automated data pipelines and reporting systems for accurate, real-time business insights
+                  </div>
+                  <div className="flex items-center gap-3 text-primary font-semibold text-lg">
+                    <TrendingUp className="w-6 h-6" />
+                    <span>
+                      Result: Reliable data, faster decision-making across the organization
                     </span>
                   </div>
                 </CardContent>
