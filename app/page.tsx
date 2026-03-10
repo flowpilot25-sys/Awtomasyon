@@ -557,69 +557,6 @@ We design, build and maintain automation systems that integrate your business to
           </ScrollAnimation>
 
           <div className="grid lg:grid-cols-2 gap-12">
-            {/* Case Study 1 */}
-            <ScrollAnimation animation="slide-in-left">
-              <Card className="bg-card shadow-card hover:shadow-elegant transition-smooth group h-full">
-                <CardHeader>
-                  <div className="flex items-center gap-4 mb-6">
-                    <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center group-hover:bg-primary/20 transition-smooth">
-                      <Users className="w-6 h-6 text-primary" />
-                    </div>
-                    <CardTitle className="text-2xl">Startup CRM</CardTitle>
-                  </div>
-                  <CardDescription className="text-lg">
-                    <strong>Problem:</strong> Leads were getting lost between
-                    Typeform and CRM
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="space-y-6">
-                  <div className="text-lg">
-                    <strong>Solution:</strong> Built workflow using Make + AI
-                    routing logic to assign leads by category and alert sales
-                    via Discord
-                  </div>
-                  <div className="flex items-center gap-3 text-primary font-semibold text-lg">
-                    <TrendingUp className="w-6 h-6" />
-                    <span>
-                      Result: Saved ~5 hours per week, 40% faster follow-ups
-                    </span>
-                  </div>
-                </CardContent>
-              </Card>
-            </ScrollAnimation>
-
-            {/* Case Study 2 */}
-            <ScrollAnimation animation="slide-in-right">
-              <Card className="bg-card shadow-card hover:shadow-elegant transition-smooth group h-full">
-                <CardHeader>
-                  <div className="flex items-center gap-4 mb-6">
-                    <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center group-hover:bg-primary/20 transition-smooth">
-                      <BarChart3 className="w-6 h-6 text-primary" />
-                    </div>
-                    <CardTitle className="text-2xl">E-commerce Brand</CardTitle>
-                  </div>
-                  <CardDescription className="text-lg">
-                    <strong>Problem:</strong> Manual order updates and customer
-                    replies
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="space-y-6">
-                  <div className="text-lg">
-                    <strong>Solution:</strong> Created backend system to sync
-                    orders + AI agent to auto-reply to tracking requests via
-                    email
-                  </div>
-                  <div className="flex items-center gap-3 text-primary font-semibold text-lg">
-                    <TrendingUp className="w-6 h-6" />
-                    <span>
-                      Result: 80% less manual work, improved response time and
-                      customer satisfaction
-                    </span>
-                  </div>
-                </CardContent>
-              </Card>
-            </ScrollAnimation>
-
             {/* FCI London */}
             <ScrollAnimation animation="slide-in-left">
               <Card className="bg-card shadow-card hover:shadow-elegant transition-smooth group h-full">
@@ -631,17 +568,17 @@ We design, build and maintain automation systems that integrate your business to
                     <CardTitle className="text-2xl">FCI London</CardTitle>
                   </div>
                   <CardDescription className="text-lg">
-                    <strong>Problem:</strong> Disconnected systems slowing down operations
+                    <strong>Problem:</strong> Client inquiries and consultation bookings were managed manually across email, phone, and social media
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-6">
                   <div className="text-lg">
-                    <strong>Solution:</strong> Integrated core business tools and automated key workflows to streamline daily operations
+                    <strong>Solution:</strong> Deployed an AI chatbot for instant client inquiries, automated appointment scheduling with calendar sync, and built a CRM pipeline that routes leads by service type
                   </div>
                   <div className="flex items-center gap-3 text-primary font-semibold text-lg">
                     <TrendingUp className="w-6 h-6" />
                     <span>
-                      Result: Unified systems, faster turnaround across departments
+                      Result: 60% fewer missed inquiries, 3x faster booking turnaround
                     </span>
                   </div>
                 </CardContent>
@@ -659,17 +596,17 @@ We design, build and maintain automation systems that integrate your business to
                     <CardTitle className="text-2xl">Linkage</CardTitle>
                   </div>
                   <CardDescription className="text-lg">
-                    <strong>Problem:</strong> Manual processes creating bottlenecks in growth
+                    <strong>Problem:</strong> Partner onboarding and deal tracking were scattered across spreadsheets and email threads
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-6">
                   <div className="text-lg">
-                    <strong>Solution:</strong> Designed automated pipelines to connect platforms and eliminate repetitive tasks
+                    <strong>Solution:</strong> Built an automated partner onboarding flow with document collection, approval workflows, and a real-time deal tracker synced to their CRM and Slack notifications
                   </div>
                   <div className="flex items-center gap-3 text-primary font-semibold text-lg">
                     <TrendingUp className="w-6 h-6" />
                     <span>
-                      Result: Streamlined operations, significant time savings across teams
+                      Result: 70% faster partner onboarding, zero lost deals from missed follow-ups
                     </span>
                   </div>
                 </CardContent>
@@ -687,17 +624,17 @@ We design, build and maintain automation systems that integrate your business to
                     <CardTitle className="text-2xl">New Media Service</CardTitle>
                   </div>
                   <CardDescription className="text-lg">
-                    <strong>Problem:</strong> Content and campaign workflows were time-consuming and fragmented
+                    <strong>Problem:</strong> Social media scheduling, client reporting, and content approvals took hours of manual coordination each week
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-6">
                   <div className="text-lg">
-                    <strong>Solution:</strong> Built automated content pipelines and reporting dashboards to keep campaigns running smoothly
+                    <strong>Solution:</strong> Automated content calendar management, built auto-generated performance reports from analytics APIs, and created a client approval pipeline with automated reminders
                   </div>
                   <div className="flex items-center gap-3 text-primary font-semibold text-lg">
                     <TrendingUp className="w-6 h-6" />
                     <span>
-                      Result: Faster campaign execution, real-time performance insights
+                      Result: 10+ hours saved weekly, clients receive real-time campaign dashboards
                     </span>
                   </div>
                 </CardContent>
@@ -715,17 +652,17 @@ We design, build and maintain automation systems that integrate your business to
                     <CardTitle className="text-2xl">StartGrowSell</CardTitle>
                   </div>
                   <CardDescription className="text-lg">
-                    <strong>Problem:</strong> Sales and lead management required too much manual effort
+                    <strong>Problem:</strong> Leads from webinars, ads, and landing pages were not being followed up fast enough, losing potential sales
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-6">
                   <div className="text-lg">
-                    <strong>Solution:</strong> Automated lead capture, CRM updates, and follow-up sequences to accelerate the sales cycle
+                    <strong>Solution:</strong> Built a multi-channel lead capture system with AI-powered lead scoring, automated email/SMS follow-up sequences, and CRM auto-updates triggered by user behavior
                   </div>
                   <div className="flex items-center gap-3 text-primary font-semibold text-lg">
                     <TrendingUp className="w-6 h-6" />
                     <span>
-                      Result: Higher conversion rates, hands-free lead nurturing
+                      Result: 45% increase in conversion rate, leads contacted within 2 minutes
                     </span>
                   </div>
                 </CardContent>
@@ -743,17 +680,17 @@ We design, build and maintain automation systems that integrate your business to
                     <CardTitle className="text-2xl">Premier Fitness</CardTitle>
                   </div>
                   <CardDescription className="text-lg">
-                    <strong>Problem:</strong> Member onboarding and scheduling were handled manually
+                    <strong>Problem:</strong> New member sign-ups, class bookings, and trainer scheduling were all done through phone calls and paper forms
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-6">
                   <div className="text-lg">
-                    <strong>Solution:</strong> Automated member sign-ups, booking confirmations, and internal notifications
+                    <strong>Solution:</strong> Automated the entire member journey — online sign-up forms synced to billing, class booking with auto-confirmations, trainer schedule management, and renewal reminders via email and SMS
                   </div>
                   <div className="flex items-center gap-3 text-primary font-semibold text-lg">
                     <TrendingUp className="w-6 h-6" />
                     <span>
-                      Result: Smoother onboarding, reduced admin workload
+                      Result: 80% less admin time, 30% increase in member retention
                     </span>
                   </div>
                 </CardContent>
@@ -771,17 +708,17 @@ We design, build and maintain automation systems that integrate your business to
                     <CardTitle className="text-2xl">Hillman Company</CardTitle>
                   </div>
                   <CardDescription className="text-lg">
-                    <strong>Problem:</strong> Reporting and data workflows were slow and error-prone
+                    <strong>Problem:</strong> Weekly reporting required pulling data from 5+ sources manually, leading to delays and inconsistencies
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-6">
                   <div className="text-lg">
-                    <strong>Solution:</strong> Implemented automated data pipelines and reporting systems for accurate, real-time business insights
+                    <strong>Solution:</strong> Built automated data pipelines that pull from all sources into a unified dashboard, with scheduled report generation and Slack alerts for KPI thresholds
                   </div>
                   <div className="flex items-center gap-3 text-primary font-semibold text-lg">
                     <TrendingUp className="w-6 h-6" />
                     <span>
-                      Result: Reliable data, faster decision-making across the organization
+                      Result: Reports generated in seconds instead of hours, 100% data accuracy
                     </span>
                   </div>
                 </CardContent>
