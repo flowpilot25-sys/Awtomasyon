@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -33,6 +34,8 @@ import {
   Lightbulb,
   User,
   MessageSquare,
+  ChevronLeft,
+  ChevronRight,
 } from "lucide-react";
 import AwtomasyonLogo from "@/public/Awtomasyon.png";
 import Image from "next/image";
@@ -42,7 +45,62 @@ import { convertPrice, formatPrice } from "@/components/currency-changer";
 import { PricingCard } from "@/components/dynamic-pricing";
 import { BlogSection } from "@/components/blog-section";
 
+const caseStudies = [
+  {
+    icon: Cog,
+    company: "FCI London",
+    problem: "Client inquiries and consultation bookings were managed manually across email, phone, and social media",
+    solution: "Deployed an AI chatbot for instant client inquiries, automated appointment scheduling with calendar sync, and built a CRM pipeline that routes leads by service type",
+    result: "60% fewer missed inquiries, 3x faster booking turnaround",
+  },
+  {
+    icon: Target,
+    company: "Linkage",
+    problem: "Partner onboarding and deal tracking were scattered across spreadsheets and email threads",
+    solution: "Built an automated partner onboarding flow with document collection, approval workflows, and a real-time deal tracker synced to their CRM and Slack notifications",
+    result: "70% faster partner onboarding, zero lost deals from missed follow-ups",
+  },
+  {
+    icon: Sparkles,
+    company: "New Media Service",
+    problem: "Social media scheduling, client reporting, and content approvals took hours of manual coordination each week",
+    solution: "Automated content calendar management, built auto-generated performance reports from analytics APIs, and created a client approval pipeline with automated reminders",
+    result: "10+ hours saved weekly, clients receive real-time campaign dashboards",
+  },
+  {
+    icon: Rocket,
+    company: "StartGrowSell",
+    problem: "Leads from webinars, ads, and landing pages were not being followed up fast enough, losing potential sales",
+    solution: "Built a multi-channel lead capture system with AI-powered lead scoring, automated email/SMS follow-up sequences, and CRM auto-updates triggered by user behavior",
+    result: "45% increase in conversion rate, leads contacted within 2 minutes",
+  },
+  {
+    icon: CheckCircle,
+    company: "Premier Fitness",
+    problem: "New member sign-ups, class bookings, and trainer scheduling were all done through phone calls and paper forms",
+    solution: "Automated the entire member journey — online sign-up forms synced to billing, class booking with auto-confirmations, trainer schedule management, and renewal reminders via email and SMS",
+    result: "80% less admin time, 30% increase in member retention",
+  },
+  {
+    icon: Shield,
+    company: "Hillman Company",
+    problem: "Weekly reporting required pulling data from 5+ sources manually, leading to delays and inconsistencies",
+    solution: "Built automated data pipelines that pull from all sources into a unified dashboard, with scheduled report generation and Slack alerts for KPI thresholds",
+    result: "Reports generated in seconds instead of hours, 100% data accuracy",
+  },
+];
+
 const Index = () => {
+  const [activeSlide, setActiveSlide] = useState(0);
+
+  const nextSlide = () => {
+    setActiveSlide((prev) => (prev + 1) % caseStudies.length);
+  };
+
+  const prevSlide = () => {
+    setActiveSlide((prev) => (prev - 1 + caseStudies.length) % caseStudies.length);
+  };
+
   return (
     <CurrencyProvider>
       <div className="min-h-screen bg-background">
@@ -443,105 +501,6 @@ We design, build and maintain automation systems that integrate your business to
         </div>
       </section>
 
-      {/* Client Reviews Section */}
-      <section className="px-6 py-20 lg:py-32">
-        <div className="max-w-7xl mx-auto">
-          <ScrollAnimation animation="fade-in-up">
-            <div className="text-center mb-20">
-              <div className="inline-flex items-center gap-2 px-4 py-2 glass rounded-full border border-primary/20 mb-6">
-                <Star className="w-4 h-4 text-primary animate-pulse" />
-                <span className="text-sm font-medium">Client Reviews</span>
-              </div>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-                Client Reviews
-              </h2>
-            </div>
-          </ScrollAnimation>
-
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <ScrollAnimation animation="fade-in-up" delay={0}>
-              <Card className="bg-card-gradient border-0 shadow-card hover:shadow-elegant transition-smooth hover:scale-105 h-full">
-                <CardHeader>
-                  <div className="flex gap-1 mb-4">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 fill-primary text-primary" />
-                    ))}
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground mb-6 leading-relaxed">
-                    "Awtomasyon helped us connect our CRM, email system, and Slack using Make and n8n. What used to take 3 hours a day now runs automatically!"
-                  </p>
-                  <div className="flex items-center gap-3">
-                    <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
-                      <User className="w-6 h-6 text-primary" />
-                    </div>
-                    <div>
-                      <p className="font-semibold">Carla D.</p>
-                      <p className="text-sm text-muted-foreground">Operations Lead, SaaS Company</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </ScrollAnimation>
-
-            <ScrollAnimation animation="fade-in-up" delay={100}>
-              <Card className="bg-card-gradient border-0 shadow-card hover:shadow-elegant transition-smooth hover:scale-105 h-full">
-                <CardHeader>
-                  <div className="flex gap-1 mb-4">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 fill-primary text-primary" />
-                    ))}
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground mb-6 leading-relaxed">
-                    "They built a full AI workflow that generates reports, summarizes data, and sends updates to our clients. Worth every peso."
-                  </p>
-                  <div className="flex items-center gap-3">
-                    <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
-                      <User className="w-6 h-6 text-primary" />
-                    </div>
-                    <div>
-                      <p className="font-semibold">Rico M.</p>
-                      <p className="text-sm text-muted-foreground">Founder, Digital Agency</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </ScrollAnimation>
-
-            <ScrollAnimation animation="fade-in-up" delay={200}>
-              <Card className="bg-card-gradient border-0 shadow-card hover:shadow-elegant transition-smooth hover:scale-105 h-full">
-                <CardHeader>
-                  <div className="flex gap-1 mb-4">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 fill-primary text-primary" />
-                    ))}
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground mb-6 leading-relaxed">
-                    "Their devs know automation inside out — and they're constantly learning. It feels like having an in-house AI team."
-                  </p>
-                  <div className="flex items-center gap-3">
-                    <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
-                      <User className="w-6 h-6 text-primary" />
-                    </div>
-                    <div>
-                      <p className="font-semibold">Anne T.</p>
-                      <p className="text-sm text-muted-foreground">E-commerce Owner</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </ScrollAnimation>
-          </div>
-        </div>
-      </section>
-
-      
-
       {/* Use Cases */}
       <section id="results" className="px-6 py-20 lg:py-32 bg-secondary/30">
         <div className="max-w-7xl mx-auto">
@@ -556,174 +515,76 @@ We design, build and maintain automation systems that integrate your business to
             </div>
           </ScrollAnimation>
 
-          <div className="grid lg:grid-cols-2 gap-12">
-            {/* FCI London */}
-            <ScrollAnimation animation="slide-in-left">
-              <Card className="bg-card shadow-card hover:shadow-elegant transition-smooth group h-full">
-                <CardHeader>
-                  <div className="flex items-center gap-4 mb-6">
-                    <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center group-hover:bg-primary/20 transition-smooth">
-                      <Cog className="w-6 h-6 text-primary" />
-                    </div>
-                    <CardTitle className="text-2xl">FCI London</CardTitle>
-                  </div>
-                  <CardDescription className="text-lg">
-                    <strong>Problem:</strong> Client inquiries and consultation bookings were managed manually across email, phone, and social media
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="space-y-6">
-                  <div className="text-lg">
-                    <strong>Solution:</strong> Deployed an AI chatbot for instant client inquiries, automated appointment scheduling with calendar sync, and built a CRM pipeline that routes leads by service type
-                  </div>
-                  <div className="flex items-center gap-3 text-primary font-semibold text-lg">
-                    <TrendingUp className="w-6 h-6" />
-                    <span>
-                      Result: 60% fewer missed inquiries, 3x faster booking turnaround
-                    </span>
-                  </div>
-                </CardContent>
-              </Card>
-            </ScrollAnimation>
+          <div className="relative max-w-4xl mx-auto">
+            {/* Carousel Navigation Arrows */}
+            <button
+              onClick={prevSlide}
+              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-12 z-10 w-10 h-10 bg-primary/10 hover:bg-primary/20 rounded-full flex items-center justify-center transition-all"
+            >
+              <ChevronLeft className="w-5 h-5 text-primary" />
+            </button>
+            <button
+              onClick={nextSlide}
+              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-12 z-10 w-10 h-10 bg-primary/10 hover:bg-primary/20 rounded-full flex items-center justify-center transition-all"
+            >
+              <ChevronRight className="w-5 h-5 text-primary" />
+            </button>
 
-            {/* Linkage */}
-            <ScrollAnimation animation="slide-in-right">
-              <Card className="bg-card shadow-card hover:shadow-elegant transition-smooth group h-full">
-                <CardHeader>
-                  <div className="flex items-center gap-4 mb-6">
-                    <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center group-hover:bg-primary/20 transition-smooth">
-                      <Target className="w-6 h-6 text-primary" />
-                    </div>
-                    <CardTitle className="text-2xl">Linkage</CardTitle>
+            {/* Carousel Slide */}
+            <div className="overflow-hidden">
+              {caseStudies.map((study, index) => {
+                const StudyIcon = study.icon;
+                return (
+                  <div
+                    key={index}
+                    className={`transition-all duration-500 ${
+                      index === activeSlide
+                        ? "opacity-100 translate-x-0"
+                        : "opacity-0 absolute top-0 left-0 right-0 pointer-events-none translate-x-8"
+                    }`}
+                    style={{ display: index === activeSlide ? "block" : "none" }}
+                  >
+                    <Card className="bg-card shadow-card hover:shadow-elegant transition-smooth group">
+                      <CardHeader>
+                        <div className="flex items-center gap-4 mb-6">
+                          <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center group-hover:bg-primary/20 transition-smooth">
+                            <StudyIcon className="w-6 h-6 text-primary" />
+                          </div>
+                          <CardTitle className="text-2xl">{study.company}</CardTitle>
+                        </div>
+                        <CardDescription className="text-lg">
+                          <strong>Problem:</strong> {study.problem}
+                        </CardDescription>
+                      </CardHeader>
+                      <CardContent className="space-y-6">
+                        <div className="text-lg">
+                          <strong>Solution:</strong> {study.solution}
+                        </div>
+                        <div className="flex items-center gap-3 text-primary font-semibold text-lg">
+                          <TrendingUp className="w-6 h-6 flex-shrink-0" />
+                          <span>Result: {study.result}</span>
+                        </div>
+                      </CardContent>
+                    </Card>
                   </div>
-                  <CardDescription className="text-lg">
-                    <strong>Problem:</strong> Partner onboarding and deal tracking were scattered across spreadsheets and email threads
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="space-y-6">
-                  <div className="text-lg">
-                    <strong>Solution:</strong> Built an automated partner onboarding flow with document collection, approval workflows, and a real-time deal tracker synced to their CRM and Slack notifications
-                  </div>
-                  <div className="flex items-center gap-3 text-primary font-semibold text-lg">
-                    <TrendingUp className="w-6 h-6" />
-                    <span>
-                      Result: 70% faster partner onboarding, zero lost deals from missed follow-ups
-                    </span>
-                  </div>
-                </CardContent>
-              </Card>
-            </ScrollAnimation>
+                );
+              })}
+            </div>
 
-            {/* New Media Service */}
-            <ScrollAnimation animation="slide-in-left">
-              <Card className="bg-card shadow-card hover:shadow-elegant transition-smooth group h-full">
-                <CardHeader>
-                  <div className="flex items-center gap-4 mb-6">
-                    <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center group-hover:bg-primary/20 transition-smooth">
-                      <Sparkles className="w-6 h-6 text-primary" />
-                    </div>
-                    <CardTitle className="text-2xl">New Media Service</CardTitle>
-                  </div>
-                  <CardDescription className="text-lg">
-                    <strong>Problem:</strong> Social media scheduling, client reporting, and content approvals took hours of manual coordination each week
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="space-y-6">
-                  <div className="text-lg">
-                    <strong>Solution:</strong> Automated content calendar management, built auto-generated performance reports from analytics APIs, and created a client approval pipeline with automated reminders
-                  </div>
-                  <div className="flex items-center gap-3 text-primary font-semibold text-lg">
-                    <TrendingUp className="w-6 h-6" />
-                    <span>
-                      Result: 10+ hours saved weekly, clients receive real-time campaign dashboards
-                    </span>
-                  </div>
-                </CardContent>
-              </Card>
-            </ScrollAnimation>
-
-            {/* StartGrowSell */}
-            <ScrollAnimation animation="slide-in-right">
-              <Card className="bg-card shadow-card hover:shadow-elegant transition-smooth group h-full">
-                <CardHeader>
-                  <div className="flex items-center gap-4 mb-6">
-                    <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center group-hover:bg-primary/20 transition-smooth">
-                      <Rocket className="w-6 h-6 text-primary" />
-                    </div>
-                    <CardTitle className="text-2xl">StartGrowSell</CardTitle>
-                  </div>
-                  <CardDescription className="text-lg">
-                    <strong>Problem:</strong> Leads from webinars, ads, and landing pages were not being followed up fast enough, losing potential sales
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="space-y-6">
-                  <div className="text-lg">
-                    <strong>Solution:</strong> Built a multi-channel lead capture system with AI-powered lead scoring, automated email/SMS follow-up sequences, and CRM auto-updates triggered by user behavior
-                  </div>
-                  <div className="flex items-center gap-3 text-primary font-semibold text-lg">
-                    <TrendingUp className="w-6 h-6" />
-                    <span>
-                      Result: 45% increase in conversion rate, leads contacted within 2 minutes
-                    </span>
-                  </div>
-                </CardContent>
-              </Card>
-            </ScrollAnimation>
-
-            {/* Premier Fitness */}
-            <ScrollAnimation animation="slide-in-left">
-              <Card className="bg-card shadow-card hover:shadow-elegant transition-smooth group h-full">
-                <CardHeader>
-                  <div className="flex items-center gap-4 mb-6">
-                    <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center group-hover:bg-primary/20 transition-smooth">
-                      <CheckCircle className="w-6 h-6 text-primary" />
-                    </div>
-                    <CardTitle className="text-2xl">Premier Fitness</CardTitle>
-                  </div>
-                  <CardDescription className="text-lg">
-                    <strong>Problem:</strong> New member sign-ups, class bookings, and trainer scheduling were all done through phone calls and paper forms
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="space-y-6">
-                  <div className="text-lg">
-                    <strong>Solution:</strong> Automated the entire member journey — online sign-up forms synced to billing, class booking with auto-confirmations, trainer schedule management, and renewal reminders via email and SMS
-                  </div>
-                  <div className="flex items-center gap-3 text-primary font-semibold text-lg">
-                    <TrendingUp className="w-6 h-6" />
-                    <span>
-                      Result: 80% less admin time, 30% increase in member retention
-                    </span>
-                  </div>
-                </CardContent>
-              </Card>
-            </ScrollAnimation>
-
-            {/* Hillman Company */}
-            <ScrollAnimation animation="slide-in-right">
-              <Card className="bg-card shadow-card hover:shadow-elegant transition-smooth group h-full">
-                <CardHeader>
-                  <div className="flex items-center gap-4 mb-6">
-                    <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center group-hover:bg-primary/20 transition-smooth">
-                      <Shield className="w-6 h-6 text-primary" />
-                    </div>
-                    <CardTitle className="text-2xl">Hillman Company</CardTitle>
-                  </div>
-                  <CardDescription className="text-lg">
-                    <strong>Problem:</strong> Weekly reporting required pulling data from 5+ sources manually, leading to delays and inconsistencies
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="space-y-6">
-                  <div className="text-lg">
-                    <strong>Solution:</strong> Built automated data pipelines that pull from all sources into a unified dashboard, with scheduled report generation and Slack alerts for KPI thresholds
-                  </div>
-                  <div className="flex items-center gap-3 text-primary font-semibold text-lg">
-                    <TrendingUp className="w-6 h-6" />
-                    <span>
-                      Result: Reports generated in seconds instead of hours, 100% data accuracy
-                    </span>
-                  </div>
-                </CardContent>
-              </Card>
-            </ScrollAnimation>
+            {/* Pagination Bullets */}
+            <div className="flex items-center justify-center gap-3 mt-8">
+              {caseStudies.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setActiveSlide(index)}
+                  className={`rounded-full transition-all duration-300 ${
+                    index === activeSlide
+                      ? "w-8 h-3 bg-primary"
+                      : "w-3 h-3 bg-primary/30 hover:bg-primary/50"
+                  }`}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </section>
