@@ -32,6 +32,7 @@ import {
   Brain,
   Lightbulb,
   User,
+  MessageSquare,
 } from "lucide-react";
 import AwtomasyonLogo from "@/public/Awtomasyon.png";
 import Image from "next/image";
@@ -164,28 +165,22 @@ We design, build and maintain automation systems that integrate your business to
           <div className="flex md:flex-row flex-wrap items-center justify-center gap-8">
             {[
               {
-                icon: Clock,
-                title: "Workflow Automation",
-                desc: "Custom workflows built to connect your apps, systems and processes.",
+                icon: MessageSquare,
+                title: "AI Chatbots & Assistants",
+                desc: "Custom AI assistants that handle customer support, lead qualification, and internal team queries across web, Slack, or CRM platforms.",
                 delay: 0,
               },
               {
-                icon: Target,
-                title: "AI-Powered Workflows",
-                desc: " Intelligent automations for data extraction, summarization, decision-making and reporting.",
+                icon: BarChart3,
+                title: "Data & Reporting Automation",
+                desc: "Automate data collection, dashboard updates, and reporting so your team always has accurate insights without manual work.",
                 delay: 100,
               },
               {
-                icon: Cog,
-                title: "Custom Integrations & Backend Automation",
-                desc: "API, database and server-side automation built to scale.",
+                icon: Lightbulb,
+                title: "Process Optimization & Consulting",
+                desc: "We analyze your current operations and design smarter automated systems that reduce costs, eliminate bottlenecks, and scale your business.",
                 delay: 200,
-              },
-              {
-                icon: CheckCircle,
-                title: "Business Operations Automation",
-                desc: " From CRM syncing to lead routing to customer engagement, we automate the backbone of your operations.",
-                delay: 300,
               },
             ].map((service, index) => (
               <ScrollAnimation
@@ -797,7 +792,7 @@ Our engineers are not just coders — they are Automation Specialists and AI Int
 
                     <div className="grid grid-cols-2 gap-6">
                       <div className="glass rounded-xl p-6 text-center hover:scale-105 transition-all duration-300 group">
-                        <Cog className="w-10 h-10 text-primary mx-auto mb-3 group-hover:scale-110 transition-transform" />
+                        <Cog className="w-10 h-10 text-primary mx-auto mb-3 animate-spin-slow" />
                         <h4 className="font-semibold mb-2 text-lg">
                           Full Service
                         </h4>
@@ -806,7 +801,7 @@ Our engineers are not just coders — they are Automation Specialists and AI Int
                         </p>
                       </div>
                       <div className="glass rounded-xl p-6 text-center hover:scale-105 transition-all duration-300 group">
-                        <Zap className="w-10 h-10 text-primary mx-auto mb-3 group-hover:scale-110 transition-transform" />
+                        <Zap className="w-10 h-10 text-primary mx-auto mb-3 animate-spark" />
                         <h4 className="font-semibold mb-2 text-lg">Reliable</h4>
                         <p className="text-sm text-muted-foreground group-hover:text-foreground transition-colors">
                           Never left in the dark
