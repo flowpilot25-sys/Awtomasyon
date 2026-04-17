@@ -120,6 +120,10 @@ export default {
 				'scale-in': {
 					'from': { opacity: '0', transform: 'scale(0.95)' },
 					'to': { opacity: '1', transform: 'scale(1)' }
+				},
+				'gradient': {
+					'0%, 100%': { backgroundPosition: '0% 50%' },
+					'50%': { backgroundPosition: '100% 50%' }
 				}
 			},
 			animation: {
@@ -131,7 +135,8 @@ export default {
 				'fade-in-up': 'fade-in-up 0.6s ease-out',
 				'slide-in-left': 'slide-in-left 0.6s ease-out',
 				'slide-in-right': 'slide-in-right 0.6s ease-out',
-				'scale-in': 'scale-in 0.3s ease-out'
+				'scale-in': 'scale-in 0.3s ease-out',
+				'gradient': 'gradient 4s ease infinite'
 			}
 		}
 	},
