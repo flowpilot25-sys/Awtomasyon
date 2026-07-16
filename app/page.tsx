@@ -45,6 +45,7 @@ import { convertPrice, formatPrice } from "@/components/currency-changer";
 import { PricingCard } from "@/components/dynamic-pricing";
 import { CustomAgentBuilder } from "@/components/custom-agent-builder";
 import { BlogSection } from "@/components/blog-section";
+import { PortfolioSection } from "@/components/portfolio-section";
 
 const caseStudies = [
   {
@@ -729,6 +730,9 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Portfolio — engineering depth behind the agents */}
+      <PortfolioSection />
+
       {/* Blog Section */}
       <BlogSection />
 
@@ -900,13 +904,13 @@ const Index = () => {
                           bg: "bg-cyan-500/10",
                         },
                         {
-                          initials: "JK",
-                          name: "Junaid Kingwell",
-                          role: "Co-Founder & CEO",
-                          handle: "junaid",
-                          desc: "Drives technology decisions, product direction, and platform growth.",
-                          skills: ["Product", "Growth", "Marketing", "Partnerships"],
-                          status: "Scaling",
+                          initials: "EJ",
+                          name: "Erish Joshua",
+                          role: "Co-Founder & Sales",
+                          handle: "erish",
+                          desc: "Leads sales, client relationships, and revenue growth.",
+                          skills: ["Sales", "Growth", "Partnerships", "Client Success"],
+                          status: "Closing",
                           accent: "from-emerald-500 to-teal-500",
                           text: "text-emerald-400",
                           border: "border-emerald-500/30",
