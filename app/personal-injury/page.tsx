@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { ScrollAnimation } from "@/components/scroll-animation";
 import { Navigation, MobileNavigation } from "@/components/navigation";
+import { CurrencyProvider } from "@/components/currency-context";
 import Link from "next/link";
 import Image from "next/image";
 import AwtomasyonLogo from "@/public/Awtomasyon.png";
@@ -112,7 +113,8 @@ const integrations = [
 
 export default function PersonalInjuryPage() {
   return (
-    <div className="min-h-screen bg-background">
+    <CurrencyProvider>
+      <div className="min-h-screen bg-background">
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 z-50 glass border-b border-border/50">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
@@ -417,6 +419,7 @@ export default function PersonalInjuryPage() {
           © 2026 Awtomasyon — AI Employees for growing businesses.
         </p>
       </footer>
-    </div>
+      </div>
+    </CurrencyProvider>
   );
 }
