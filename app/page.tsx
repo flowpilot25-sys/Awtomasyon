@@ -43,7 +43,6 @@ import { CurrencyProvider } from "@/components/currency-context";
 import { useCurrency } from "@/components/currency-context";
 import { convertPrice, formatPrice } from "@/components/currency-changer";
 import { PricingCard } from "@/components/dynamic-pricing";
-import { CustomAgentBuilder } from "@/components/custom-agent-builder";
 import { BlogSection } from "@/components/blog-section";
 import { PortfolioSection } from "@/components/portfolio-section";
 
@@ -559,84 +558,230 @@ const Index = () => {
             <div className="text-center mb-12 sm:mb-20">
               <div className="inline-flex items-center gap-2 px-4 py-2 glass rounded-full border border-primary/20 mb-6">
                 <Sparkles className="w-4 h-4 text-primary animate-pulse" />
-                <span className="text-sm font-medium">Our Packages</span>
+                <span className="text-sm font-medium">Pricing</span>
               </div>
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
-                Build Your AI Employee
+                Simple, scalable pricing
               </h2>
+              <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
+                Start small and scale as your AI Employees take on more work. Predictable monthly pricing — no setup fees.
+              </p>
             </div>
           </ScrollAnimation>
 
-          {/* Pricing: Starter AI Agent + Custom Builder */}
-          <div className="grid lg:grid-cols-5 gap-6 lg:gap-8 mb-8">
+          {/* Pricing: 3 tiers */}
+          <div className="grid lg:grid-cols-3 gap-6 lg:gap-8 mb-8 items-stretch">
+            {[
+              {
+                name: "Starter",
+                badge: "Starter · Explore",
+                price: 20,
+                blurb: "Perfect for exploring Awtomasyon and simple AI workflows.",
+                popular: false,
+                cta: "Start Building",
+                included: [
+                  "1 AI Employee",
+                  "AI Chat",
+                  "AI Reasoning",
+                  "Tool Calling",
+                  "Knowledge Base",
+                  "CRM Integration",
+                  "Gmail Integration",
+                  "Google Calendar Integration",
+                  "Up to 3 Integrations",
+                  "Conversation History",
+                ],
+                limits: [
+                  "300 conversations / month",
+                  "50 tool calls / month",
+                  "1 AI Employee",
+                ],
+                notIncluded: [
+                  "Voice Calling",
+                  "AI Messaging",
+                  "Image Understanding",
+                  "Image Generation",
+                  "API Access",
+                  "Priority Support",
+                ],
+              },
+              {
+                name: "Startup",
+                badge: "Startup · Most Popular",
+                price: 199,
+                blurb: "Everything you need to deploy your first production AI Employee.",
+                popular: true,
+                cta: "Hire AI Employee",
+                included: [
+                  "1 AI Employee",
+                  "AI Chat",
+                  "AI Voice Calling",
+                  "AI Messaging",
+                  "AI Reasoning",
+                  "Tool Calling",
+                  "Knowledge Base",
+                  "CRM Integration",
+                  "Gmail Integration",
+                  "Google Calendar Integration",
+                  "Unlimited Integrations",
+                  "Conversation History",
+                  "Analytics",
+                  "Standard Support",
+                ],
+                limits: [
+                  "2,000 conversations / month",
+                  "500 voice minutes / month",
+                  "500 outbound messages / month",
+                  "500 image understanding requests / month",
+                  "1 AI Employee",
+                ],
+                notIncluded: [],
+              },
+              {
+                name: "Pro",
+                badge: "Pro · Scale",
+                price: 499,
+                blurb: "Built for businesses running multiple AI Employees across teams.",
+                popular: false,
+                cta: "Book a Demo",
+                included: [
+                  "Up to 5 AI Employees",
+                  "AI Chat",
+                  "AI Voice Calling",
+                  "AI Messaging",
+                  "AI Reasoning",
+                  "Tool Calling",
+                  "Knowledge Base",
+                  "CRM Integration",
+                  "Gmail Integration",
+                  "Google Calendar Integration",
+                  "Unlimited Integrations",
+                  "Conversation History",
+                  "Advanced Analytics",
+                  "Priority Support",
+                  "White-glove Onboarding",
+                ],
+                limits: [
+                  "10,000 conversations / month",
+                  "3,000 voice minutes / month",
+                  "5,000 outbound messages / month",
+                  "2,500 image understanding requests / month",
+                  "Up to 5 AI Employees",
+                ],
+                notIncluded: [],
+              },
+            ].map((plan, idx) => (
+              <ScrollAnimation
+                key={plan.name}
+                animation="fade-in-up"
+                delay={idx * 100}
+                className="h-full"
+              >
+                <div className="relative h-full group">
+                  <div
+                    className={`absolute -inset-4 bg-gradient-to-br ${
+                      plan.popular
+                        ? "from-primary/30 via-accent/15"
+                        : "from-primary/20 via-accent/10"
+                    } to-transparent rounded-3xl blur-2xl`}
+                  ></div>
 
-            {/* LEFT — Starter AI Agent ($20) */}
-            <ScrollAnimation animation="slide-in-left" className="lg:col-span-2">
-              <div className="relative h-full group">
-                <div className="absolute -inset-4 bg-gradient-to-br from-primary/20 via-accent/10 to-transparent rounded-3xl blur-2xl"></div>
+                  <div
+                    className={`relative h-full flex flex-col glass rounded-3xl border ${
+                      plan.popular ? "border-primary/50" : "border-primary/20"
+                    } p-5 sm:p-8 backdrop-blur-xl overflow-hidden`}
+                  >
+                    {/* Top gradient bar */}
+                    <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-primary via-accent to-primary"></div>
 
-                <div className="relative h-full glass rounded-3xl border border-primary/20 p-5 sm:p-8 backdrop-blur-xl overflow-hidden">
-                  {/* Top gradient bar */}
-                  <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-primary via-accent to-primary"></div>
+                    {/* Badge */}
+                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/30 text-[11px] font-mono text-primary uppercase tracking-wider mb-5 self-start">
+                      <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+                      {plan.badge}
+                    </div>
 
-                  {/* Badge */}
-                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/30 text-[11px] font-mono text-primary uppercase tracking-wider mb-5">
-                    <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
-                    Starter · The Core Platform
-                  </div>
+                    {/* Title */}
+                    <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
+                    <p className="text-sm text-muted-foreground mb-6 min-h-[40px]">
+                      {plan.blurb}
+                    </p>
 
-                  {/* Title */}
-                  <h3 className="text-2xl font-bold mb-2">AI Employee Core</h3>
-                  <p className="text-sm text-muted-foreground mb-6">
-                    The foundation for your AI Employee. Connect your business tools and activate additional capabilities whenever you're ready.
-                  </p>
+                    {/* Price */}
+                    <div className="flex items-baseline gap-2 mb-6">
+                      <span className="text-5xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                        ${plan.price}
+                      </span>
+                      <span className="text-muted-foreground text-sm">/month</span>
+                    </div>
 
-                  {/* Price */}
-                  <div className="flex items-baseline gap-2 mb-1">
-                    <span className="text-5xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">$25</span>
-                    <span className="text-muted-foreground text-sm">/month</span>
-                  </div>
-                  <div className="text-xs font-mono text-emerald-400 mb-6 flex items-center gap-1.5">
-                    <CheckCircle className="w-3 h-3" />
-                    Predictable monthly price — no extra fees
-                  </div>
-
-                  {/* What's included */}
-                  <div className="space-y-3 mb-6">
-                    {[
-                      { text: "Text reasoning & actions", included: true },
-                      { text: "Works with your CRM", included: true },
-                      { text: "Connects Gmail, Slack & Google Sheets", included: true },
-                      { text: "Unlimited integrations", included: true },
-                      { text: "Hosted AI platform included", included: true },
-                      { text: "Runs continuously — predictable monthly price, no setup fee", included: true },
-                      { text: "Voice, Messaging & Vision — add anytime", included: false },
-                    ].map((f, i) => (
-                      <div key={i} className={`flex items-start gap-2.5 text-sm ${!f.included ? "opacity-40" : ""}`}>
-                        {f.included ? (
+                    {/* Includes */}
+                    <div className="text-[10px] font-mono text-muted-foreground uppercase tracking-widest mb-3">
+                      / includes
+                    </div>
+                    <div className="space-y-2.5 mb-6">
+                      {plan.included.map((f, i) => (
+                        <div key={i} className="flex items-start gap-2.5 text-sm">
                           <CheckCircle className="w-4 h-4 text-primary shrink-0 mt-0.5" />
-                        ) : (
-                          <span className="w-4 h-4 rounded-full border border-muted-foreground/50 shrink-0 mt-0.5 flex items-center justify-center text-[10px] text-muted-foreground">×</span>
-                        )}
-                        <span className={f.included ? "text-foreground" : "text-muted-foreground line-through"}>{f.text}</span>
-                      </div>
-                    ))}
+                          <span className="text-foreground">{f}</span>
+                        </div>
+                      ))}
+                    </div>
+
+                    {/* Usage Limits */}
+                    <div className="text-[10px] font-mono text-muted-foreground uppercase tracking-widest mb-3">
+                      / usage limits
+                    </div>
+                    <div className="space-y-2.5 mb-6">
+                      {plan.limits.map((f, i) => (
+                        <div key={i} className="flex items-start gap-2.5 text-sm">
+                          <Zap className="w-4 h-4 text-accent shrink-0 mt-0.5" />
+                          <span className="text-muted-foreground">{f}</span>
+                        </div>
+                      ))}
+                    </div>
+
+                    {/* Not Included */}
+                    {plan.notIncluded.length > 0 && (
+                      <>
+                        <div className="text-[10px] font-mono text-muted-foreground/60 uppercase tracking-widest mb-3">
+                          / not included
+                        </div>
+                        <div className="space-y-2.5 mb-6">
+                          {plan.notIncluded.map((f, i) => (
+                            <div key={i} className="flex items-start gap-2.5 text-sm opacity-40">
+                              <span className="w-4 h-4 rounded-full border border-muted-foreground/50 shrink-0 mt-0.5 flex items-center justify-center text-[10px] text-muted-foreground">
+                                ×
+                              </span>
+                              <span className="text-muted-foreground line-through">
+                                {f}
+                              </span>
+                            </div>
+                          ))}
+                        </div>
+                      </>
+                    )}
+
+                    {/* CTA pinned to bottom */}
+                    <div className="mt-auto pt-2">
+                      <Link href="/strategycall">
+                        <Button
+                          variant={plan.popular ? "hero" : "outline"}
+                          size="lg"
+                          className={`w-full ${
+                            plan.popular
+                              ? "text-white"
+                              : "border-primary/30 bg-background/40 backdrop-blur hover:bg-primary/10 hover:border-primary/60"
+                          }`}
+                        >
+                          {plan.cta}
+                          <ArrowRight className="w-4 h-4 ml-2" />
+                        </Button>
+                      </Link>
+                    </div>
                   </div>
-
-                  <Link href="/strategycall">
-                    <Button variant="hero" size="lg" className="w-full text-white">
-                      Start Building
-                      <ArrowRight className="w-4 h-4 ml-2" />
-                    </Button>
-                  </Link>
                 </div>
-              </div>
-            </ScrollAnimation>
-
-            {/* RIGHT — Custom AI Agent Builder */}
-            <ScrollAnimation animation="slide-in-right" className="lg:col-span-3">
-              <CustomAgentBuilder />
-            </ScrollAnimation>
+              </ScrollAnimation>
+            ))}
           </div>
         </div>
       </section>
