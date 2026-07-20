@@ -398,46 +398,6 @@ export default function StrategyCall() {
             </div>
           </div>
         </ScrollAnimation>
-
-        {/* Process strip */}
-        <ScrollAnimation animation="fade-in-up" delay={400}>
-          <div className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-3">
-            {[
-              {
-                step: "01",
-                title: "You brief us",
-                desc: "Fill the form — the more detail the better.",
-              },
-              {
-                step: "02",
-                title: "We scope it",
-                desc: "Within 24h you get a deployment plan + quote.",
-              },
-              {
-                step: "03",
-                title: "Agent goes live",
-                desc: "Most agents ship in days, not months.",
-              },
-            ].map((s, i) => (
-              <ScrollAnimation key={i} animation="fade-in-up" delay={450 + i * 100}>
-                <div className="glass rounded-2xl border border-white/10 hover:border-primary/30 p-4 transition-all hover:-translate-y-1 group">
-                  <div className="flex items-center gap-2 mb-2">
-                    <span className="text-[10px] font-mono text-primary/70 uppercase tracking-[0.2em]">
-                      / {s.step}
-                    </span>
-                    <div className="flex-1 h-px bg-gradient-to-r from-primary/20 to-transparent"></div>
-                  </div>
-                  <div className="font-semibold text-sm mb-1 group-hover:text-primary transition-colors">
-                    {s.title}
-                  </div>
-                  <div className="text-xs text-muted-foreground leading-relaxed">
-                    {s.desc}
-                  </div>
-                </div>
-              </ScrollAnimation>
-            ))}
-          </div>
-        </ScrollAnimation>
       </div>
     </div>
   );
