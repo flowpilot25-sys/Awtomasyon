@@ -94,7 +94,7 @@ export function BlogSection() {
               From Our Blog
             </h2>
             <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto">
-              Tips, guides, and insights on automation, AI, and business efficiency
+              Tips, guides, and insights on AI agents, automation, and business efficiency
             </p>
           </div>
         </ScrollAnimation>

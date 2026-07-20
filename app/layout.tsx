@@ -7,34 +7,35 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { ThemeProvider } from "@/components/theme-provider";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryProvider } from "@/components/react-query-provider";
+import { ScrollProgress } from "@/components/scroll-progress";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Awtomasyon - Automation Services",
-  description: "Awtomasyon helps small teams and solo founders eliminate busywork with fully managed automations — powered by Zapier, Make, AI agents, and custom-built systems.",
+  title: "Awtomasyon - Hire AI Employees",
+  description: "Deploy AI employees that answer calls, qualify leads, schedule appointments, follow up with customers, update your CRM, and work 24/7 — without hiring another employee.",
   icons: {
     icon: "/Awtomasyon.png",
   },
   openGraph: {
     url: "https://awtomasyon.com/",
     type: "website",
-    title: "Awtomasyon - Automation Services",
-    description: "Awtomasyon helps small teams and solo founders eliminate busywork with fully managed automations — powered by Zapier, Make, AI agents, and custom-built systems.",
+    title: "Awtomasyon - Hire AI Employees",
+    description: "Deploy AI employees that answer calls, qualify leads, schedule appointments, follow up with customers, update your CRM, and work 24/7 — without hiring another employee.",
     images: [
       {
         url: "/Awtomasyon.png",
         width: 1200,
         height: 630,
-        alt: "Awtomasyon - Automation Services",
+        alt: "Awtomasyon - Hire AI Employees",
       },
     ],
     siteName: "Awtomasyon",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Awtomasyon - Automation Services",
-    description: "Awtomasyon helps small teams and solo founders eliminate busywork with fully managed automations — powered by Zapier, Make, AI agents, and custom-built systems.",
+    title: "Awtomasyon - Hire AI Employees",
+    description: "Deploy AI employees that answer calls, qualify leads, schedule appointments, follow up with customers, update your CRM, and work 24/7 — without hiring another employee.",
     images: ["/Awtomasyon.png"],
   },
   metadataBase: new URL("https://awtomasyon.com"),
@@ -85,6 +86,7 @@ export default function RootLayout({
             <TooltipProvider>
               <Toaster />
               <Sonner />
+              <ScrollProgress />
               {children}
             </TooltipProvider>
           </ThemeProvider>

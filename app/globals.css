@@ -126,6 +126,32 @@ All colors MUST be HSL.
     border: 1px solid hsl(var(--border));
   }
 
+  /* Adaptive surfaces — work in both light & dark modes */
+  .surface-sunken {
+    background: hsl(var(--secondary) / 0.5);
+  }
+  .dark .surface-sunken {
+    background: rgb(0 0 0 / 0.3);
+  }
+  .surface-raised {
+    background: hsl(var(--card));
+  }
+  .dark .surface-raised {
+    background: rgb(255 255 255 / 0.02);
+  }
+  .surface-hover:hover {
+    background: hsl(var(--secondary) / 0.8);
+  }
+  .dark .surface-hover:hover {
+    background: rgb(255 255 255 / 0.03);
+  }
+  .surface-subtle {
+    background: hsl(var(--secondary) / 0.3);
+  }
+  .dark .surface-subtle {
+    background: rgb(255 255 255 / 0.02);
+  }
+
   /* Floating animation */
   @keyframes float {
     0%, 100% { transform: translateY(0px); }

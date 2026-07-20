@@ -12,9 +12,10 @@ import { useCurrency } from "@/components/currency-context";
 
 const navigationItems = [
   { name: "Home", href: "#home" },
-  { name: "Services", href: "#services" },
+  { name: "AI Employees", href: "#services" },
   { name: "Pricing", href: "#pricing" },
   { name: "Results", href: "#results" },
+  { name: "Portfolio", href: "#portfolio" },
   { name: "Blog", href: "#blog" },
   { name: "About", href: "#about" },
   { name: "Contact", href: "#contact" },
