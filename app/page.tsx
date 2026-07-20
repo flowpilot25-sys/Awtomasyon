@@ -148,18 +148,17 @@ const Index = () => {
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
                 </span>
-                <span className="text-sm font-medium tracking-wide">AI Agents · Live & Working</span>
+                <span className="text-sm font-medium tracking-wide">AI Employees · Working 24/7</span>
               </div>
             </ScrollAnimation>
 
             <ScrollAnimation animation="fade-in-up" delay={150}>
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 leading-[1.05] tracking-tight">
-                Your business,
+                Hire
                 <br />
-                run by{" "}
                 <span className="relative inline-block">
                   <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient">
-                    AI agents.
+                    AI Employees.
                   </span>
                   <svg className="absolute -bottom-2 left-0 w-full" height="8" viewBox="0 0 300 8" fill="none">
                     <path d="M1 5.5C50 2 150 2 299 5.5" stroke="url(#underline)" strokeWidth="2" strokeLinecap="round"/>
@@ -176,7 +175,7 @@ const Index = () => {
 
             <ScrollAnimation animation="fade-in-up" delay={300}>
               <p className="text-lg md:text-xl text-muted-foreground mb-10 max-w-xl mx-auto lg:mx-0 leading-relaxed">
-                We deploy intelligent AI agents that handle your operations 24/7 — qualifying leads, answering customers, updating systems, and scaling your team without new hires.
+                Deploy AI employees that answer calls, qualify leads, schedule appointments, follow up with customers, update your CRM, and work 24/7 — without hiring another employee.
               </p>
             </ScrollAnimation>
 
@@ -188,7 +187,7 @@ const Index = () => {
                     size="lg"
                     className="w-full sm:w-auto text-base px-8 py-6 animate-pulse-glow text-white group"
                   >
-                    Deploy Your First Agent
+                    Hire an AI Employee
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </Button>
                 </Link>
@@ -198,7 +197,7 @@ const Index = () => {
                     size="lg"
                     className="w-full sm:w-auto text-base px-8 py-6 border-primary/30 bg-background/40 backdrop-blur hover:bg-primary/10 hover:border-primary/60 transition-all"
                   >
-                    See Agents in Action
+                    Book a Demo
                   </Button>
                 </a>
               </div>
@@ -240,8 +239,8 @@ const Index = () => {
                       <span className="absolute -top-0.5 -right-0.5 w-2.5 h-2.5 rounded-full bg-green-400 border-2 border-background animate-pulse"></span>
                     </div>
                     <div>
-                      <div className="text-sm font-semibold leading-tight">Awtomasyon Agent</div>
-                      <div className="text-[10px] text-muted-foreground font-mono leading-tight">gpt-5 · thinking</div>
+                      <div className="text-sm font-semibold leading-tight">AI Employee</div>
+                      <div className="text-[10px] text-muted-foreground font-mono leading-tight">online · working</div>
                     </div>
                   </div>
                   <div className="flex items-center gap-1.5 text-[10px] text-green-400 font-mono">
@@ -353,13 +352,13 @@ const Index = () => {
                 <span className="text-sm font-medium">Your AI Workforce</span>
               </div>
               <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-                Meet the agents<br/>
+                Meet your<br/>
                 <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient">
-                  running your business.
+                  AI Employees.
                 </span>
               </h2>
               <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-                Purpose-built AI agents that act like employees — not chatbots. Each one trained on your data, connected to your tools, and working 24/7.
+                Specialized AI employees that each do one job well — connected to the tools you already use and working around the clock.
               </p>
             </div>
           </ScrollAnimation>
@@ -393,12 +392,12 @@ const Index = () => {
                       </div>
                       <div className="min-w-0">
                         <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-1 leading-tight">AI Employee</h3>
-                        <div className="text-sm font-mono text-emerald-400">Full-Stack Operator</div>
+                        <div className="text-sm font-mono text-emerald-400">Works 24/7</div>
                       </div>
                     </div>
 
                     <p className="text-base text-muted-foreground leading-relaxed mb-4">
-                      A digital team member who owns sales ops, finance, or HR <span className="text-foreground font-medium">end-to-end</span>. Gets onboarded like a real hire, learns your playbook, and delivers outcomes — not tasks.
+                      A digital team member who owns one job <span className="text-foreground font-medium">end-to-end</span>. Gets onboarded like a real hire, learns how you work, and delivers outcomes — not tasks.
                     </p>
 
                     {/* SOP note */}
@@ -455,54 +454,54 @@ const Index = () => {
             <div className="flex flex-col gap-3">
               {[
                 {
-                  icon: Cog,
-                  name: "AI Automation",
-                  role: "Workflow Engineer",
-                  desc: "Executes multi-step workflows across your stack. No rules — just goals.",
+                  icon: MessageSquare,
+                  name: "AI Receptionist",
+                  role: "Answers Every Call",
+                  desc: "Answers incoming calls, books appointments, and transfers urgent callers — 24/7.",
                   accent: "from-cyan-500 to-blue-500",
                   text: "text-cyan-400",
                   border: "hover:border-cyan-500/40",
-                  meta: "runs_24_7",
-                },
-                {
-                  icon: Brain,
-                  name: "AI Developer",
-                  role: "Code Engineer",
-                  desc: "Ships code, fixes bugs, writes tests, and deploys at machine speed.",
-                  accent: "from-violet-500 to-fuchsia-500",
-                  text: "text-violet-400",
-                  border: "hover:border-violet-500/40",
-                  meta: "+12 -4 · main.ts",
-                },
-                {
-                  icon: MessageSquare,
-                  name: "AI Virtual Assistant",
-                  role: "Executive Support",
-                  desc: "Inbox triage, scheduling, research & follow-ups — so you focus on decisions.",
-                  accent: "from-amber-500 to-orange-500",
-                  text: "text-amber-400",
-                  border: "hover:border-amber-500/40",
-                  meta: "inbox: 0",
+                  meta: "24/7 · never misses",
                 },
                 {
                   icon: Target,
-                  name: "AI Sales Agent",
-                  role: "Lead Qualification & Outreach",
-                  desc: "Scores leads, personalizes outreach, books meetings, nurtures deals.",
+                  name: "AI Lead Qualification Assistant",
+                  role: "Qualifies & Books",
+                  desc: "Qualifies every lead, books meetings, and makes sure no opportunity slips through.",
                   accent: "from-pink-500 to-rose-500",
                   text: "text-pink-400",
                   border: "hover:border-pink-500/40",
                   meta: "47 leads · 92%",
                 },
                 {
+                  icon: MessageSquare,
+                  name: "AI Follow-up Assistant",
+                  role: "Re-engages Prospects",
+                  desc: "Sends reminders, follows up with prospects, and confirms appointments automatically.",
+                  accent: "from-amber-500 to-orange-500",
+                  text: "text-amber-400",
+                  border: "hover:border-amber-500/40",
+                  meta: "0 missed follow-ups",
+                },
+                {
                   icon: BarChart3,
-                  name: "AI Analyst",
-                  role: "Data & Reporting",
-                  desc: "Pulls data from every system, spots anomalies, delivers exec reports.",
+                  name: "AI CRM Assistant",
+                  role: "Keeps Records Updated",
+                  desc: "Updates customer records, logs notes, and keeps your CRM organized in real time.",
                   accent: "from-indigo-500 to-blue-600",
                   text: "text-indigo-400",
                   border: "hover:border-indigo-500/40",
-                  meta: "12 dashboards",
+                  meta: "synced · real-time",
+                },
+                {
+                  icon: Cog,
+                  name: "AI Operations Assistant",
+                  role: "Handles Busywork",
+                  desc: "Takes repetitive tasks off your team's plate so they can focus on higher-value work.",
+                  accent: "from-violet-500 to-fuchsia-500",
+                  text: "text-violet-400",
+                  border: "hover:border-violet-500/40",
+                  meta: "runs 24/7",
                 },
               ].map((a, i) => (
                 <ScrollAnimation key={i} animation="slide-in-right" delay={i * 80}>
@@ -539,11 +538,11 @@ const Index = () => {
             <div className="mt-10 sm:mt-12 text-center">
               <p className="text-xs sm:text-sm text-muted-foreground mb-4 font-mono px-2">
                 <span className="inline-block w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse mr-2 align-middle"></span>
-                Need a custom agent? We build specialized ones for your industry.
+                Need an AI Employee built for your industry? We tailor them to how you work.
               </p>
               <Link href="/strategycall">
                 <Button variant="outline" className="border-primary/30 bg-background/40 backdrop-blur hover:bg-primary/10 hover:border-primary/60">
-                  Design My AI Team
+                  Book a Demo
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
               </Link>
@@ -583,13 +582,13 @@ const Index = () => {
                   {/* Badge */}
                   <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/30 text-[11px] font-mono text-primary uppercase tracking-wider mb-5">
                     <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
-                    Starter · One Agent
+                    Starter · One AI Employee
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-2xl font-bold mb-2">AI Agent</h3>
+                  <h3 className="text-2xl font-bold mb-2">AI Employee</h3>
                   <p className="text-sm text-muted-foreground mb-6">
-                    A single connected agent built for your workflow. No setup cost.
+                    One specialized AI employee built for your business. No setup cost.
                   </p>
 
                   {/* Price */}
@@ -599,19 +598,19 @@ const Index = () => {
                   </div>
                   <div className="text-xs font-mono text-emerald-400 mb-6 flex items-center gap-1.5">
                     <CheckCircle className="w-3 h-3" />
-                    We cover the API tokens — no extra fees
+                    Predictable monthly price — no extra fees
                   </div>
 
                   {/* What's included */}
                   <div className="space-y-3 mb-6">
                     {[
-                      { text: "1 dedicated AI agent", included: true },
+                      { text: "1 dedicated AI employee", included: true },
                       { text: "Connects to your tools (CRM, Gmail, Slack, Sheets)", included: true },
                       { text: "Free connections — unlimited integrations", included: true },
-                      { text: "Text-based reasoning & actions", included: true },
-                      { text: "API tokens included (we cover them)", included: true },
+                      { text: "Works 24/7 on your business tasks", included: true },
+                      { text: "Everything included — no usage fees", included: true },
                       { text: "Image generation", included: false },
-                      { text: "Voice / speech capabilities", included: false },
+                      { text: "Voice / phone capabilities", included: false },
                     ].map((f, i) => (
                       <div key={i} className={`flex items-start gap-2.5 text-sm ${!f.included ? "opacity-40" : ""}`}>
                         {f.included ? (
@@ -626,7 +625,7 @@ const Index = () => {
 
                   <Link href="/strategycall">
                     <Button variant="hero" size="lg" className="w-full text-white">
-                      Deploy My Agent
+                      Hire This AI Employee
                       <ArrowRight className="w-4 h-4 ml-2" />
                     </Button>
                   </Link>
@@ -755,8 +754,8 @@ const Index = () => {
                 </ScrollAnimation>
                 <ScrollAnimation animation="fade-in-up" delay={200}>
                   <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto">
-                    A focused team helping founders and growing businesses run
-                    smarter through automation
+                    A focused team helping founders and growing businesses grow
+                    with AI Employees
                   </p>
                 </ScrollAnimation>
               </div>
@@ -775,15 +774,15 @@ const Index = () => {
                             Awtomasyon
                           </h3>
                           <p className="text-primary font-semibold text-base sm:text-lg">
-                            Automation Specialists
+                            AI Employee Company
                           </p>
                         </div>
                       </div>
 
                       <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed">
-                        We build smart, reliable automation systems that
-                        eliminate repetitive work and connect your tools — so
-                        you can focus on growth.
+                        We give businesses AI Employees that handle repetitive
+                        work around the clock and connect to the tools you
+                        already use — so your team can focus on growth.
                       </p>
 
                       <div className="space-y-6">
@@ -796,7 +795,7 @@ const Index = () => {
                         <div className="flex items-center text-muted-foreground group-hover:text-foreground transition-colors">
                           <Target className="w-6 h-6 mr-4 text-primary" />
                           <span className="text-lg">
-                            End-to-end automation solutions
+                            AI Employees built for your business
                           </span>
                         </div>
                         <div className="flex items-center text-muted-foreground group-hover:text-foreground transition-colors">
@@ -925,10 +924,10 @@ const Index = () => {
                         {
                           initials: "TM",
                           name: "Tim",
-                          role: "AI Engineer",
+                          role: "AI Employee Specialist",
                           handle: "tim",
-                          desc: "Designs and ships AI systems — from agent orchestration to LLM-powered backends.",
-                          skills: ["AI Systems", "LLMs", "APIs"],
+                          desc: "Designs and deploys AI Employees that take repetitive work off your team.",
+                          skills: ["AI Employees", "Integrations", "Onboarding"],
                           status: "Shipping",
                           accent: "from-violet-500 to-fuchsia-500",
                           text: "text-violet-400",
@@ -938,10 +937,10 @@ const Index = () => {
                         {
                           initials: "MS",
                           name: "Moris",
-                          role: "AI Automation",
+                          role: "AI Employee Specialist",
                           handle: "moris",
-                          desc: "Builds AI-powered automations and intelligent workflow solutions.",
-                          skills: ["Agents", "Automation", "Workflows"],
+                          desc: "Builds and trains AI Employees tailored to each business.",
+                          skills: ["AI Employees", "Integrations", "Support"],
                           status: "Training",
                           accent: "from-amber-500 to-orange-500",
                           text: "text-amber-400",
@@ -1043,13 +1042,13 @@ const Index = () => {
                 <span className="text-sm font-medium tracking-wide">Ready when you are</span>
               </div>
               <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-                Ready to deploy<br/>
+                Ready to hire<br/>
                 <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient">
-                  your AI agents?
+                  your first AI Employee?
                 </span>
               </h2>
               <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-                Your first agent goes live in days — not months. Pick a plan, send us your SOP, and watch it start working.
+                Your AI employee goes live in days — not months. Choose a role, connect your tools, and it starts working right away.
               </p>
             </div>
           </ScrollAnimation>
@@ -1062,7 +1061,7 @@ const Index = () => {
                   size="lg"
                   className="w-full sm:w-auto text-base px-8 py-6 animate-pulse-glow text-white group"
                 >
-                  Deploy Your First Agent
+                  Hire an AI Employee
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </Link>
@@ -1072,7 +1071,7 @@ const Index = () => {
                   size="lg"
                   className="w-full sm:w-auto text-base px-8 py-6 border-primary/30 bg-background/40 backdrop-blur hover:bg-primary/10 hover:border-primary/60"
                 >
-                  See the AI Team
+                  Meet the AI Employees
                 </Button>
               </a>
             </div>
@@ -1083,7 +1082,7 @@ const Index = () => {
       {/* Footer */}
       <footer className="px-4 sm:px-6 py-10 sm:py-12 bg-secondary/30 text-center border-t border-border/50">
         <p className="text-foreground text-sm sm:text-lg">
-          © 2024 Awtomasyon — AI agents for the next generation of founders.
+          © 2026 Awtomasyon — AI Employees for growing businesses.
         </p>
       </footer>
     </div>
