@@ -562,7 +562,7 @@ const Index = () => {
                 <span className="text-sm font-medium">Our Packages</span>
               </div>
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
-                Choose Your Plan
+                Build Your AI Employee
               </h2>
             </div>
           </ScrollAnimation>
@@ -582,13 +582,13 @@ const Index = () => {
                   {/* Badge */}
                   <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/30 text-[11px] font-mono text-primary uppercase tracking-wider mb-5">
                     <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
-                    Starter · One AI Employee
+                    Starter · The Core Platform
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-2xl font-bold mb-2">AI Employee</h3>
+                  <h3 className="text-2xl font-bold mb-2">AI Employee Core</h3>
                   <p className="text-sm text-muted-foreground mb-6">
-                    One specialized AI employee built for your business. No setup cost.
+                    The foundation for your AI Employee. Connect your business tools and activate additional capabilities whenever you're ready.
                   </p>
 
                   {/* Price */}
@@ -604,13 +604,13 @@ const Index = () => {
                   {/* What's included */}
                   <div className="space-y-3 mb-6">
                     {[
-                      { text: "1 dedicated AI employee", included: true },
-                      { text: "Connects to your tools (CRM, Gmail, Slack, Sheets)", included: true },
-                      { text: "Free connections — unlimited integrations", included: true },
-                      { text: "Works 24/7 on your business tasks", included: true },
-                      { text: "Everything included — no usage fees", included: true },
-                      { text: "Image generation", included: false },
-                      { text: "Voice / phone capabilities", included: false },
+                      { text: "Text reasoning & actions", included: true },
+                      { text: "Works with your CRM", included: true },
+                      { text: "Connects Gmail, Slack & Google Sheets", included: true },
+                      { text: "Unlimited integrations", included: true },
+                      { text: "Hosted AI platform included", included: true },
+                      { text: "Runs continuously — predictable monthly price, no setup fee", included: true },
+                      { text: "Voice, Messaging & Vision — add anytime", included: false },
                     ].map((f, i) => (
                       <div key={i} className={`flex items-start gap-2.5 text-sm ${!f.included ? "opacity-40" : ""}`}>
                         {f.included ? (
@@ -625,7 +625,7 @@ const Index = () => {
 
                   <Link href="/strategycall">
                     <Button variant="hero" size="lg" className="w-full text-white">
-                      Hire This AI Employee
+                      Start Building
                       <ArrowRight className="w-4 h-4 ml-2" />
                     </Button>
                   </Link>

@@ -27,8 +27,8 @@ type Capability = {
 const capabilities: Capability[] = [
   {
     id: "voice",
-    name: "Voice AI",
-    desc: "Real-time speech in & out. Phone calls, voice assistants, dictation.",
+    name: "Voice Calling",
+    desc: "Answer and make phone calls — your AI Employee talks with customers in real time.",
     price: 79,
     icon: Mic,
     accent: "from-pink-500 to-rose-500",
@@ -37,8 +37,8 @@ const capabilities: Capability[] = [
   },
   {
     id: "image",
-    name: "Image AI",
-    desc: "Generate or analyze images. Product mockups, visual QA, design.",
+    name: "Vision",
+    desc: "Read and understand images — documents, product photos, visual checks.",
     price: 49,
     icon: ImageIcon,
     accent: "from-violet-500 to-fuchsia-500",
@@ -47,8 +47,8 @@ const capabilities: Capability[] = [
   },
   {
     id: "send",
-    name: "Send AI",
-    desc: "Outbound messaging — email, SMS, WhatsApp, Slack, personalized at scale.",
+    name: "Messaging",
+    desc: "Outbound follow-ups by email, SMS, WhatsApp and Slack — personalized at scale.",
     price: 39,
     icon: Send,
     accent: "from-amber-500 to-orange-500",
@@ -57,8 +57,8 @@ const capabilities: Capability[] = [
   },
   {
     id: "other",
-    name: "Bring Your Own Tokens / Stack",
-    desc: "Have your own API keys, running system, or custom setup? We'll plug the agent into it.",
+    name: "Bring Your Own Stack",
+    desc: "Already have your own keys, system, or setup? We'll connect your AI Employee to it.",
     price: 0,
     icon: Wrench,
     accent: "from-cyan-500 to-blue-500",
@@ -101,9 +101,9 @@ export function CustomAgentBuilder() {
           </div>
         </div>
 
-        <h3 className="text-2xl font-bold mb-2">Custom AI Agent</h3>
+        <h3 className="text-2xl font-bold mb-2">Build Your AI Employee</h3>
         <p className="text-sm text-muted-foreground mb-6">
-          Start with the $25 base and add capabilities. Pay only for what you use.
+          Customize your AI Employee by enabling only the capabilities your business needs. Start with the Core platform and add Voice, Messaging, Vision, or your own AI stack.
         </p>
 
         {/* Options */}
@@ -170,7 +170,7 @@ export function CustomAgentBuilder() {
         {/* Total summary */}
         <div className="rounded-xl bg-black/30 border border-white/5 p-4 mb-5 font-mono text-xs">
           <div className="flex items-center justify-between mb-2 text-muted-foreground">
-            <span>Base AI Agent</span>
+            <span>AI Employee Core</span>
             <span className="text-foreground">${BASE_PRICE}/mo</span>
           </div>
           {addons.filter((a) => a.price > 0).map((a) => (
@@ -181,7 +181,7 @@ export function CustomAgentBuilder() {
           ))}
           {hasCustom && (
             <div className="flex items-center justify-between mb-2 text-cyan-400">
-              <span>+ Your tokens / stack</span>
+              <span>+ Your own stack</span>
               <span>free</span>
             </div>
           )}
@@ -194,7 +194,7 @@ export function CustomAgentBuilder() {
               </span>
               <span className="text-muted-foreground ml-1">/mo</span>
               {hasCustom && (
-                <div className="text-[10px] text-cyan-400 mt-0.5">+ your tokens / stack</div>
+                <div className="text-[10px] text-cyan-400 mt-0.5">+ your own stack</div>
               )}
             </div>
           </div>
@@ -202,12 +202,12 @@ export function CustomAgentBuilder() {
 
         <Link href="/strategycall">
           <Button variant="hero" size="lg" className="w-full text-white">
-            {selected.length > 0 ? `Build My Agent — $${total}/mo` : "Configure & Book Call"}
+            {selected.length > 0 ? `Build My AI Employee — $${total}/mo` : "Configure AI Employee"}
             <ArrowRight className="w-4 h-4 ml-2" />
           </Button>
         </Link>
         <p className="text-[11px] text-center text-muted-foreground mt-3 font-mono">
-          All add-ons require payment · tokens covered by us
+          Predictable monthly pricing · no setup fee
         </p>
       </div>
     </div>
